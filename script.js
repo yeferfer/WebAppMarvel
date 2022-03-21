@@ -1,84 +1,73 @@
-//Esto es funcion que trae la informacion en la API para el carruseles de los comics
-const getData = async function () {
+//HTML Components
+const btnSearchCharacter = document.querySelector("#btnSearchCharacter");
+const inputCharacter = document.querySelector("#inputCharacter");
+const carousel1 = document.querySelector(".carousel1");
+const carousel1Name = document.querySelector(".carousel1Name");
+
+//This is the function that retrieves the information in the API for the carousels
+const getData = async function (character) {
   try {
     const request = await fetch(
-      // Este es la direccion de la API para las series
-      // "https://gateway.marvel.com:443/v1/public/series?ts=1&apikey=35d5da2d7a9b9cc5a68d34e8c1f0b8f2&hash=701d981312a61e2d8957fa50bb9b8b60"
-
-      // Este es la direccion de la API para los comics
-      "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=35d5da2d7a9b9cc5a68d34e8c1f0b8f2&hash=701d981312a61e2d8957fa50bb9b8b60"
+      `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${character}&ts=1&apikey=35d5da2d7a9b9cc5a68d34e8c1f0b8f2&hash=701d981312a61e2d8957fa50bb9b8b60`
     );
     const AllData = await request.json().then((data) => data?.data?.results);
-
+    console.log(AllData);
     return AllData;
-  } catch (e) {
-    console.error(e.message);
+  } catch (err) {
+    console.error(`${err.message} 😐`);
   }
 };
 
-// Esto es la informacion de la API para mostar el carrusel de imegenes de las series
-// const getData2 = async function () {
-//   try {
-//     const request = await fetch(
-//       // este es de series
-//       "https://gateway.marvel.com:443/v1/public/series?ts=1&apikey=35d5da2d7a9b9cc5a68d34e8c1f0b8f2&hash=701d981312a61e2d8957fa50bb9b8b60"
+// This is the carousel function
+let carouselImg;
+const carousels = () => {
+  getData(inputCharacter.value).then((res) => {
+    //Get All Img
+    const allImg = res
+      .map((element) => {
+        if (
+          element?.thumbnail?.path ===
+          "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+        )
+          return ["NaN"];
+        return [element?.thumbnail?.path, element?.thumbnail?.extension];
+      })
+      .filter((i) => i[0] !== "NaN");
 
-//       // este es de comics
-//       // "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=35d5da2d7a9b9cc5a68d34e8c1f0b8f2&hash=701d981312a61e2d8957fa50bb9b8b60"
-//     );
-//     const AllData = await request.json().then((data) => data?.data?.results);
+    //Get All Name
+    const allName = res
+      .map((element) => {
+        if (
+          element?.thumbnail?.path ===
+          "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+        )
+          return ["NaN"];
+        return [element?.name];
+      })
+      .filter((i) => i[0] !== "NaN");
 
-//     return AllData;
-//   } catch (e) {
-//     console.error(e.message);
-//   }
-// };
+    //pass image
+    let cont = 0;
+    carouselImg = setInterval(() => {
+      try {
+        if (cont === allImg.length) cont = 0;
+        const img = `${allImg[cont][0]}.${allImg[cont][1]}`;
+        const name = allName[cont];
 
-//Esto demuentra que el carruseles 1 sirve
-getData().then((res) => {
-  const allImg = res.map((element) => [
-    element?.thumbnail?.path,
-    element?.thumbnail?.extension,
-  ]);
+        carousel1.src = img;
+        carousel1Name.textContent = name;
+        carousel1.classList.add("carousel");
+        cont++;
+      } catch (err) {
+        console.error(`${err.message} 😐`);
+        clearInterval(carouselImg);
+      }
+    }, 3000);
+  });
+};
 
-  let cont = 0;
-  const car1 = setInterval(() => {
-    try {
-      if (cont === allImg.length) cont = 0;
-      const img = `${allImg[cont][0]}.${allImg[cont][1]}`;
-      document.querySelector(".imgprueba").src = img;
-
-      //Esto no quiere cojer el Css toca revisarlo
-      document.querySelector(".imgprueba").style.width = "50%";
-      cont++;
-    } catch (e) {
-      console.error(e.message);
-      clearInterval(car1);
-    }
-  }, 3000);
+//Button Search Characters
+btnSearchCharacter.addEventListener("click", () => {
+  clearInterval(carouselImg);
+  carousels();
 });
-
-//Esto comprueba que se puen tener dos carruseles al mismo tiempo con async
-// getData2().then((res) => {
-//   console.log(res);
-//   const allImg2 = res.map((element) => [
-//     element?.thumbnail?.path,
-//     element?.thumbnail?.extension,
-//   ]);
-//   let cont2 = 0;
-//   const car2 = setInterval(() => {
-//     try {
-//       console.log("img2");
-//       if (cont2 === allImg2.length) cont2 = 0;
-//       const img = `${allImg2[cont2][0]}.${allImg2[cont2][1]}`;
-//       document.querySelector(".imgprueba2").src = img;
-//       //Esto no quiere cojer el Css toca revisarlo
-//       document.querySelector(".imgprueba2").style.left = "50%";
-//       cont2++;
-//     } catch (e) {
-//       console.error(e.message);
-//       clearInterval(car2);
-//     }
-//   }, 3000);
-//   console.log("Hola mundo");
-// });
