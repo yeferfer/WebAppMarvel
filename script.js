@@ -1,12 +1,66 @@
-const getData = async function () {
-  const request = await fetch(
-    "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=35d5da2d7a9b9cc5a68d34e8c1f0b8f2&hash=701d981312a61e2d8957fa50bb9b8b60"
-  );
-  const data = await request.json().then((data) => data?.data?.results);
-  console.log(data[2].images[0], "jpg");
-  document.querySelector(
-    ".imgprueba"
-  ).src = `${data[2].images[0].path}.${data[2].images[0].extension}`;
+//HTML Components
+const btnSearchCharacter = document.querySelector("#btnSearchCharacter");
+const inputCharacter = document.querySelector("#inputCharacter");
+const carousel1 = document.querySelector(".carousel1");
+const carousel1Name = document.querySelector(".carousel1Name");
+
+//This is the function that retrieves the information in the API for the carousels
+const getData = async function (character) {
+  try {
+    const request = await fetch(
+      `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${character}&ts=1&apikey=35d5da2d7a9b9cc5a68d34e8c1f0b8f2&hash=701d981312a61e2d8957fa50bb9b8b60`
+    );
+    const AllData = await request.json().then((data) => data?.data?.results);
+    console.log(AllData);
+    return AllData;
+  } catch (err) {
+    console.error(`${err.message} 😐`);
+  }
 };
 
-getData();
+// This is the carousel function
+let passCarousel;
+const carousels = () => {
+  const allSpecificData = new Array();
+  getData(inputCharacter.value).then((res) => {
+    res.forEach((element) => {
+      if (
+        element?.thumbnail?.path !==
+        "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+      )
+        allSpecificData.push([
+          { urlImg: [element?.thumbnail?.path, element?.thumbnail?.extension] },
+          { nameImg: [element?.name] },
+        ]);
+    });
+  });
+
+  //pass image
+  let cont = 0;
+  passCarousel = setInterval(() => {
+    try {
+      //asd is the abbreviation of allSpecificData
+      let asdUrlImg = allSpecificData[cont][0].urlImg;
+      let asdname = allSpecificData[cont][1].nameImg;
+
+      if (cont === allSpecificData.length - 1) cont = 0;
+
+      const img = `${asdUrlImg[0]}.${asdUrlImg[1]}`;
+      const name = asdname;
+
+      carousel1.src = img;
+      carousel1Name.textContent = name;
+      carousel1.classList.add("carousel");
+      cont++;
+    } catch (err) {
+      console.error(`${err.message} 😐`);
+      clearInterval(passCarousel);
+    }
+  }, 3000);
+};
+
+//Button Search Characters
+btnSearchCharacter.addEventListener("click", () => {
+  clearInterval(passCarousel);
+  carousels();
+});
