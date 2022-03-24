@@ -1,10 +1,23 @@
 "use strict";
 
 //HTML Components
+
+//Search
+const searchCharacters = document.querySelector(".searchCharacters");
 const btnSearchCharacter = document.querySelector("#btnSearchCharacter");
 const inputCharacter = document.querySelector("#inputCharacter");
-const carousel1 = document.querySelector(".carousel1");
-const carousel1Name = document.querySelector(".carousel1Name");
+
+//Slicer
+const carrousel = document.querySelector(".carrousel");
+
+//Card
+const imgCardOne = document.querySelector(".img-card-one");
+const nameCardOne = document.querySelector(".name-card-one");
+const containerCard = document.querySelector(".container-card");
+const descriptionCardOne = document.querySelector(".description-card-one");
+const moreInformationCardOne = document.querySelector(
+  ".more-information-card-one"
+);
 
 //This is the function that retrieves the information in the API for the carousels
 const getData = async function (character) {
@@ -33,6 +46,8 @@ const carousels = () => {
         allSpecificData.push([
           { urlImg: [element?.thumbnail?.path, element?.thumbnail?.extension] },
           { nameImg: [element?.name] },
+          { descriptionImg: [element?.description] },
+          { urlDetailImg: [element?.urls?.at(0)?.url] },
         ]);
     });
   });
@@ -43,28 +58,38 @@ const carousels = () => {
     try {
       //asd is the abbreviation of allSpecificData
       let asdUrlImg = allSpecificData[cont][0].urlImg;
-      let asdname = allSpecificData[cont][1].nameImg;
+      let asdName = allSpecificData[cont][1].nameImg;
+      let asdDescription = allSpecificData[cont][2].descriptionImg;
+      let asdUrl = allSpecificData[cont][3].urlDetailImg;
 
       if (cont === allSpecificData.length - 1) cont = 0;
 
       const img = `${asdUrlImg[0]}.${asdUrlImg[1]}`;
-      const name = asdname;
 
-      carousel1.src = img;
-      carousel1Name.textContent = name;
-      carousel1.classList.add("carousel");
+      //Add info for the card
+      imgCardOne.src = img;
+      nameCardOne.textContent = asdName;
+      descriptionCardOne.textContent = asdDescription;
+      moreInformationCardOne.textContent = "Show More";
+      moreInformationCardOne.href = asdUrl;
+
+      //Show card and Slider
+      carrousel.classList.remove("hidden");
+      containerCard.classList.remove("hidden");
+
       cont++;
     } catch (err) {
       console.error(`${err.message} 😐`);
       clearInterval(passCarousel);
     }
-  }, 3000);
+  }, 5000);
 };
 
 //Button Search Characters
 btnSearchCharacter.addEventListener("click", () => {
   clearInterval(passCarousel);
   carousels();
+  searchCharacters.style.margin = "5% auto";
 });
 
 // Slider

@@ -8,20 +8,8 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="carrousel">
-      <div class="container-carrousel">
-         <img src="assets/01.jpeg" alt="Imagen 1" class="img">
-         <img src="assets/02.jpeg" alt="Imagen 2" class="img">
-         <img src="assets/03.jpeg" alt="Imagen 3" class="img">
-      </div>
-
-      <ul class="puntos">
-        <li class="punto activo"></li>
-        <li class="punto"></li>
-        <li class="punto"></li>
-      </ul>
-    </div>
-    <div class=""box>
+    <!-- Search -->
+    <div class="" box>
       <div class="searchCharacters">
         <input
           type="text"
@@ -30,11 +18,33 @@
         />
         <button id="btnSearchCharacter" type="button">🔎</button>
       </div>
-    <div>
-      <h2 class ="carousel1Name"></h2>
-      <img class="carousel1" alt="" />
     </div>
-    
+
+    <!-- Slider -->
+    <div class="carrousel hidden">
+      <div class="container-carrousel">
+        <img src="assets/01.jpeg" alt="Imagen 1" class="img" />
+        <img src="assets/02.jpeg" alt="Imagen 2" class="img" />
+        <img src="assets/03.jpeg" alt="Imagen 3" class="img" />
+      </div>
+
+      <ul class="puntos">
+        <li class="punto activo"></li>
+        <li class="punto"></li>
+        <li class="punto"></li>
+      </ul>
+    </div>
+
+    <!-- Card -->
+    <div class="container-card hidden">
+      <div class="card-one">
+        <img class="img-card-one" alt="" />
+        <h4 class="name-card-one"></h4>
+        <p class="description-card-one"></p>
+        <a class="more-information-card-one" href="#">.</a>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
