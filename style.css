@@ -1,5 +1,7 @@
 body {
   background-color: #1d1d1d;
+  margin: 0;
+  padding: 0;
 }
 
 /*Search Style and Animation*/
@@ -90,4 +92,66 @@ body {
 
 .carousel1Name {
   color: white;
+}
+
+/* Slider */
+
+.carrousel {
+  width: 100%;
+  max-width: 120em;
+  overflow: hidden;
+  position: relative;
+  background-color: aqua;
+}
+
+.carrousel .container-carrousel {
+  width: 300%;
+  background-color: orange;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.container-carrousel::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.carrousel .img {
+  width: calc(100% / 3);
+  min-height: 10vh;
+  background-color: lime;
+}
+.carrousel .puntos {
+  width: 100%;
+  background-color: red;
+  padding: 0.4em;
+  margin: -112px 0 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.carrousel .punto {
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 0.5em 2em;
+  list-style: none;
+  z-index: 1;
+}
+
+.carrousel .punto.activo {
+  background-color: #ffffff;
+  transform: scale(1.1);
 }

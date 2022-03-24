@@ -1,3 +1,5 @@
+"use strict";
+
 //HTML Components
 const btnSearchCharacter = document.querySelector("#btnSearchCharacter");
 const inputCharacter = document.querySelector("#inputCharacter");
@@ -63,4 +65,39 @@ const carousels = () => {
 btnSearchCharacter.addEventListener("click", () => {
   clearInterval(passCarousel);
   carousels();
+});
+
+// Slider
+
+const containerCarrousel = document.querySelector(".container-carrousel");
+
+const punto = document.querySelectorAll(".punto");
+
+// Asignar un click a cada punto
+// Cuando se hace click en cada punto
+// Saber la posición de ese punto
+// Aplicar un transform translateX al grande
+// QUITAR la clase activo de todos los puntos
+// AÑADIR la clase activo al punto que hemos hecho click
+
+// Recorrer TODOS los puntos
+punto.forEach((cadaPunto, i) => {
+  // Asignar un click a cadaPunto
+  punto[i].addEventListener("click", () => {
+    // Guardar la posición de ese PUNTO
+    let posicion = i;
+    // Calculando el espacio que debe DESPLAZARSE el .container-carrousel
+    let operacion = posicion * -33.33;
+
+    // Movemos el containerCarrousel
+    containerCarrousel.style.transform = `translateX(${operacion}%)`;
+
+    // Recorremos TODOS los puntos
+    punto.forEach((cadaPunto, i) => {
+      // Quitamos la calse "activo" a todos los punto
+      punto[i].classList.remove("activo");
+    });
+    // Añadir la calse "activo" en el punto que hemos hecho click
+    punto[i].classList.add("activo");
+  });
 });
