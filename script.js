@@ -7,15 +7,18 @@ const searchCharacters = document.querySelector(".searchCharacters");
 const btnSearchCharacter = document.querySelector("#btnSearchCharacter");
 const inputCharacter = document.querySelector("#inputCharacter");
 
+//loader
+const loaderContainer = document.querySelector(".loader-container");
+
 //Slicer
 const carrousel = document.querySelector(".carrousel");
 
 //Card
-const imgCardOne = document.querySelector(".img-card-one");
-const nameCardOne = document.querySelector(".name-card-one");
-const containerCard = document.querySelector(".container-card");
-const descriptionCardOne = document.querySelector(".description-card-one");
-const moreInformationCardOne = document.querySelector(
+const imgCardOne = document.querySelectorAll(".img-card-one");
+const nameCardOne = document.querySelectorAll(".name-card-one");
+const containerCard = document.querySelectorAll(".container-card");
+const descriptionCardOne = document.querySelectorAll(".description-card-one");
+const moreInformationCardOne = document.querySelectorAll(
   ".more-information-card-one"
 );
 
@@ -67,15 +70,18 @@ const carousels = () => {
       const img = `${asdUrlImg[0]}.${asdUrlImg[1]}`;
 
       //Add info for the card
-      imgCardOne.src = img;
-      nameCardOne.textContent = asdName;
-      descriptionCardOne.textContent = asdDescription;
-      moreInformationCardOne.textContent = "Show More";
-      moreInformationCardOne.href = asdUrl;
+      for (let i = 0; i < imgCardOne.length; i++) {
+        imgCardOne[i].src = img;
+        nameCardOne[i].textContent = asdName;
+        descriptionCardOne[i].textContent = asdDescription;
+        moreInformationCardOne[i].textContent = "Show More";
+        moreInformationCardOne[i].href = asdUrl;
+      }
 
       //Show card and Slider
+      loaderContainer.classList.add("hidden");
       carrousel.classList.remove("hidden");
-      containerCard.classList.remove("hidden");
+      containerCard[0].classList.remove("hidden");
 
       cont++;
     } catch (err) {
@@ -87,6 +93,7 @@ const carousels = () => {
 
 //Button Search Characters
 btnSearchCharacter.addEventListener("click", () => {
+  loaderContainer.classList.remove("hidden");
   clearInterval(passCarousel);
   carousels();
   searchCharacters.style.margin = "5% auto";
