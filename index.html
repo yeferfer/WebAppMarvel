@@ -6,22 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="carrousel">
-      <div class="container-carrousel">
-         <img src="assets/01.jpeg" alt="Imagen 1" class="img">
-         <img src="assets/02.jpeg" alt="Imagen 2" class="img">
-         <img src="assets/03.jpeg" alt="Imagen 3" class="img">
-      </div>
-
-      <ul class="puntos">
-        <li class="punto activo"></li>
-        <li class="punto"></li>
-        <li class="punto"></li>
-      </ul>
-    </div>
-    <div class=""box>
+    <!-- Search -->
+    <div class="" box>
       <div class="searchCharacters">
         <input
           type="text"
@@ -30,11 +22,98 @@
         />
         <button id="btnSearchCharacter" type="button">🔎</button>
       </div>
-    <div>
-      <h2 class ="carousel1Name"></h2>
-      <img class="carousel1" alt="" />
     </div>
-    
+
+    <!-- Loader -->
+    <div class="loader-container hidden">
+      <div class="loader"></div>
+      <div class="loader2"></div>
+      <div class="loader3"></div>
+    </div>
+
+    <!-- Slider -->
+    <div class="container--slider hidden">
+      <!-- <div class="container--slider"> -->
+      <div class="slider" id="slider">
+        <div class="slider__section">
+          <img src="assets/01.jpeg" alt="Imagen 1" class="slider__img" />
+          <div class="info">
+            <h1>Spiderman</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip
+            </p>
+          </div>
+        </div>
+        <div class="slider__section">
+          <img src="assets/02.jpeg" alt="Imagen 2" class="slider__img" />
+          <div class="info">
+            <h1>Wolverine</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip
+            </p>
+          </div>
+        </div>
+        <div class="slider__section">
+          <img src="assets/03.jpeg" alt="Imagen 3" class="slider__img" />
+          <div class="info">
+            <h1>Marvel</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- arrows -->
+      <div class="slider__btn slider__btn--right" id="btn-right">&#10095;</div>
+      <div class="slider__btn slider__btn--left" id="btn-left">&#10094;</div>
+      <!-- Puntos de selección imagen -->
+      <!--       <ul class="puntos">
+        <li class="punto activo"></li>
+        <li class="punto"></li>
+        <li class="punto"></li>
+      </ul>-->
+    </div>
+    <!-- Slider end -->
+    <!-- Card -->
+    <div class="container-card hidden">
+      <div class="card-one">
+        <img class="img-card-one" alt="" />
+        <h4 class="name-card-one"></h4>
+        <p class="description-card-one"></p>
+        <a class="more-information-card-one" href="#">.</a>
+      </div>
+
+      <div class="card-one">
+        <img class="img-card-one" alt="" />
+        <h4 class="name-card-one"></h4>
+        <p class="description-card-one"></p>
+        <a class="more-information-card-one" href="#">.</a>
+      </div>
+
+      <div class="card-one">
+        <img class="img-card-one" alt="" />
+        <h4 class="name-card-one"></h4>
+        <p class="description-card-one"></p>
+        <a class="more-information-card-one" href="#">.</a>
+      </div>
+
+      <div class="card-one">
+        <img class="img-card-one" alt="" />
+        <h4 class="name-card-one"></h4>
+        <p class="description-card-one"></p>
+        <a class="more-information-card-one" href="#">.</a>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

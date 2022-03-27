@@ -1,10 +1,26 @@
 "use strict";
 
 //HTML Components
+
+//Search
+const searchCharacters = document.querySelector(".searchCharacters");
 const btnSearchCharacter = document.querySelector("#btnSearchCharacter");
 const inputCharacter = document.querySelector("#inputCharacter");
-const carousel1 = document.querySelector(".carousel1");
-const carousel1Name = document.querySelector(".carousel1Name");
+
+//loader
+const loaderContainer = document.querySelector(".loader-container");
+
+//Slider
+const carrousel = document.querySelector(".container--slider");
+
+//Card
+const imgCardOne = document.querySelectorAll(".img-card-one");
+const nameCardOne = document.querySelectorAll(".name-card-one");
+const containerCard = document.querySelectorAll(".container-card");
+const descriptionCardOne = document.querySelectorAll(".description-card-one");
+const moreInformationCardOne = document.querySelectorAll(
+  ".more-information-card-one"
+);
 
 //This is the function that retrieves the information in the API for the carousels
 const getData = async function (character) {
@@ -33,6 +49,8 @@ const carousels = () => {
         allSpecificData.push([
           { urlImg: [element?.thumbnail?.path, element?.thumbnail?.extension] },
           { nameImg: [element?.name] },
+          { descriptionImg: [element?.description] },
+          { urlDetailImg: [element?.urls?.at(0)?.url] },
         ]);
     });
   });
@@ -43,35 +61,50 @@ const carousels = () => {
     try {
       //asd is the abbreviation of allSpecificData
       let asdUrlImg = allSpecificData[cont][0].urlImg;
-      let asdname = allSpecificData[cont][1].nameImg;
+      let asdName = allSpecificData[cont][1].nameImg;
+      let asdDescription = allSpecificData[cont][2].descriptionImg;
+      let asdUrl = allSpecificData[cont][3].urlDetailImg;
 
       if (cont === allSpecificData.length - 1) cont = 0;
 
       const img = `${asdUrlImg[0]}.${asdUrlImg[1]}`;
-      const name = asdname;
 
-      carousel1.src = img;
-      carousel1Name.textContent = name;
-      carousel1.classList.add("carousel");
+      //Add info for the card
+      for (let i = 0; i < imgCardOne.length; i++) {
+        imgCardOne[i].src = img;
+        nameCardOne[i].textContent = asdName;
+        descriptionCardOne[i].textContent = asdDescription;
+        moreInformationCardOne[i].textContent = "Show More";
+        moreInformationCardOne[i].href = asdUrl;
+      }
+
+      //Show card and Slider
+      loaderContainer.classList.add("hidden");
+      carrousel.classList.remove("hidden");
+      containerCard[0].classList.remove("hidden");
+
       cont++;
     } catch (err) {
       console.error(`${err.message} 😐`);
       clearInterval(passCarousel);
     }
-  }, 3000);
+  }, 5000);
 };
 
 //Button Search Characters
 btnSearchCharacter.addEventListener("click", () => {
+  loaderContainer.classList.remove("hidden");
   clearInterval(passCarousel);
   carousels();
+  searchCharacters.style.margin = "5% auto";
 });
 
-// Slider
+/* Slider Dots */
+// Investigar como fusionar dots con arrows
 
-const containerCarrousel = document.querySelector(".container-carrousel");
+/* const containerCarrousel = document.querySelector(".slider");
 
-const punto = document.querySelectorAll(".punto");
+const punto = document.querySelectorAll(".punto"); */
 
 // Asignar un click a cada punto
 // Cuando se hace click en cada punto
@@ -81,7 +114,8 @@ const punto = document.querySelectorAll(".punto");
 // AÑADIR la clase activo al punto que hemos hecho click
 
 // Recorrer TODOS los puntos
-punto.forEach((cadaPunto, i) => {
+
+/* punto.forEach((cadaPunto, i) => {
   // Asignar un click a cadaPunto
   punto[i].addEventListener("click", () => {
     // Guardar la posición de ese PUNTO
@@ -100,4 +134,65 @@ punto.forEach((cadaPunto, i) => {
     // Añadir la calse "activo" en el punto que hemos hecho click
     punto[i].classList.add("activo");
   });
+}); */
+
+/* Slider Hero Start */
+
+const slider = document.querySelector("#slider");
+let sliderSection = document.querySelectorAll(".slider__section");
+let sliderSectionLast = sliderSection[sliderSection.length - 1];
+
+const btnLeft = document.querySelector("#btn-left");
+const btnRight = document.querySelector("#btn-right");
+
+slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+
+function Next() {
+  let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
+  slider.style.marginLeft = "-200%";
+  slider.style.transition = "all 0.5s";
+  setTimeout(function () {
+    slider.style.transition = "none";
+    slider.insertAdjacentElement("beforeend", sliderSectionFirst);
+    slider.style.marginLeft = "-100%";
+  }, 500);
+}
+
+function Prev() {
+  let sliderSection = document.querySelectorAll(".slider__section");
+  let sliderSectionLast = sliderSection[sliderSection.length - 1];
+  slider.style.marginLeft = "0%";
+  slider.style.transition = "all 0.5s";
+  setTimeout(function () {
+    slider.style.transition = "none";
+    slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+    slider.style.marginLeft = "-100%";
+  }, 500);
+}
+
+btnRight.addEventListener("click", function () {
+  Next();
 });
+
+btnLeft.addEventListener("click", function () {
+  Prev();
+});
+
+setInterval(() => {
+  Next();
+}, 5000);
+
+/* Slider Hero End */
+
+/* Pruebas API */
+
+const getCharacterData = async function (character) {
+  const response = await fetch(
+    `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${character}&ts=1&apikey=35d5da2d7a9b9cc5a68d34e8c1f0b8f2&hash=701d981312a61e2d8957fa50bb9b8b60`
+  );
+  console.log(response);
+  const data = await response.json();
+  console.log(data);
+};
+
+getCharacterData("spiderman");
