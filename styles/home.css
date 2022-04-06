@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 #btnPageSearch {
   background-color: #4caf50; /* Green */
   border: none;
@@ -7,4 +11,55 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.section {
+  position: relative;
+  height: 450px;
+  width: 1075px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  margin-left: visible;
+  overflow: visible;
+  width: 779px;
+  height: 370px;
+}
+
+section .card .image {
+  position: relative;
+  margin-top: 20px;
+  height: 340px;
+  width: 240px;
+  padding: 3px;
+}
+
+section .card .image img {
+  opacity: 0.6;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.titleCardImg {
+  color: #ffffff;
+  position: absolute;
+  top: 75%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.7;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+  color: #ffffff;
 }
