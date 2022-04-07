@@ -5,115 +5,290 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="#" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
-    <!-- Search -->
-    <div class="" box>
-      <div class="searchCharacters">
-        <input
-          type="text"
-          id="inputCharacter"
-          placeholder="Search Your Character..."
-        />
-        <button id="btnSearchCharacter" type="button">🔎</button>
-      </div>
-    </div>
+    <!-- Page Home Start -->
+    <div class="pageHome">
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      />
+      <link href="./styles/home.css" rel="stylesheet" type="text/css" />
+      <button class="btnPageSearch" type="button">go to the page search</button>
 
-    <!-- Loader -->
-    <div class="loader-container hidden">
-      <div class="loader"></div>
-      <div class="loader2"></div>
-      <div class="loader3"></div>
-    </div>
-
-    <!-- Slider -->
-    <div class="container--slider hidden">
-      <!-- <div class="container--slider"> -->
-      <div class="slider" id="slider">
-        <div class="slider__section">
-          <img src="assets/01.jpeg" alt="Imagen 1" class="slider__img" />
-          <div class="info">
-            <h1>Spiderman</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip
-            </p>
+      <!-- Slider Img Start -->
+      <div class="container--slider">
+        <!-- <div class="container--slider"> -->
+        <div class="slider" id="slider">
+          <div class="slider__section">
+            <img src="assets/01.jpeg" alt="Imagen 1" class="slider__img" />
+            <div class="info">
+              <h1>Spiderman</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip
+              </p>
+            </div>
+          </div>
+          <div class="slider__section">
+            <img src="assets/02.jpeg" alt="Imagen 2" class="slider__img" />
+            <div class="info">
+              <h1>Wolverine</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip
+              </p>
+            </div>
+          </div>
+          <div class="slider__section">
+            <img src="assets/03.jpeg" alt="Imagen 3" class="slider__img" />
+            <div class="info">
+              <h1>Marvel</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip
+              </p>
+            </div>
           </div>
         </div>
-        <div class="slider__section">
-          <img src="assets/02.jpeg" alt="Imagen 2" class="slider__img" />
-          <div class="info">
-            <h1>Wolverine</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip
-            </p>
-          </div>
+        <!-- arrows -->
+        <div class="slider__btn slider__btn--right" id="btn-right">
+          &#10095;
         </div>
-        <div class="slider__section">
-          <img src="assets/03.jpeg" alt="Imagen 3" class="slider__img" />
-          <div class="info">
-            <h1>Marvel</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip
-            </p>
+        <div class="slider__btn slider__btn--left" id="btn-left">&#10094;</div>
+        <!-- Puntos de selección imagen -->
+        <!--<ul class="puntos">
+             <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+          </ul>-->
+      </div>
+      <!-- Slider Img end -->
+
+      <!-- Slicer Card Star -->
+      <section>
+        <div class="swiper mySwiper container">
+          <div class="swiper-wrapper content">
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="image">
+                <img class="imgHome" src="" alt="" />
+                <div class="titleCardImg">titleCardImg</div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <script src="./scripts/home.js"></script>
+
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        let swiper = new Swiper('.mySwiper', {
+          slidesPerView: 6,
+          spaceBetween: 10,
+          slidesPerGroup: 6,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
+      <!-- Slicer Card End -->
+    </div>
+    <!-- Page Home End -->
+
+    <!-- Button Return Start -->
+    <div class="hidden">
+      <link href="./styles/return.css" rel="stylesheet" type="text/css" />
+      <button class="btnReturn" type="button">return page previous</button>
+      <script src="./scripts/return.js"></script>
+    </div>
+    <!-- Button Return End -->
+
+    <!-- login Start -->
+    <div class="pageLogin hidden">
+      <link href="./styles/login.css" rel="stylesheet" type="text/css" />
+      <h2>This is the page of login</h2>
+      <script src="./scripts/login.js"></script>
+    </div>
+    <!-- Login End -->
+
+    <!-- Search And Loader Start -->
+    <div class="pageSearch hidden">
+      <link
+        href="./styles/searchAndView.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <!-- Search -->
+      <div class="" box>
+        <div class="searchCharacters">
+          <input
+            type="text"
+            class="inputCharacter"
+            placeholder="Search Your Character..."
+          />
+          <button class="btnSearchCharacter" type="button">🔎</button>
         </div>
       </div>
-      <!-- arrows -->
-      <div class="slider__btn slider__btn--right" id="btn-right">&#10095;</div>
-      <div class="slider__btn slider__btn--left" id="btn-left">&#10094;</div>
-      <!-- Puntos de selección imagen -->
-      <!--       <ul class="puntos">
-        <li class="punto activo"></li>
-        <li class="punto"></li>
-        <li class="punto"></li>
-      </ul>-->
+
+      <!-- Card -->
+
+      <div class="loader-container hidden">
+        <div class="loader"></div>
+        <div class="loader2"></div>
+        <div class="loader3"></div>
+      </div>
+
+      <div class="container-card hidden">
+        <div class="card-one">
+          <img class="img-card-one" alt="" />
+          <h4 class="name-card-one"></h4>
+          <p class="description-card-one"></p>
+          <a class="more-information-card-one" href="#">.</a>
+        </div>
+
+        <div class="card-one">
+          <img class="img-card-one" alt="" />
+          <h4 class="name-card-one"></h4>
+          <p class="description-card-one"></p>
+          <a class="more-information-card-one" href="#">.</a>
+        </div>
+
+        <div class="card-one">
+          <img class="img-card-one" alt="" />
+          <h4 class="name-card-one"></h4>
+          <p class="description-card-one"></p>
+          <a class="more-information-card-one" href="#">.</a>
+        </div>
+
+        <div class="card-one">
+          <img class="img-card-one" alt="" />
+          <h4 class="name-card-one"></h4>
+          <p class="description-card-one"></p>
+          <a class="more-information-card-one" href="#">.</a>
+        </div>
+      </div>
+      <script src="./scripts/searchAndView.js"></script>
     </div>
-    <!-- Slider end -->
-    <!-- Card -->
-    <div class="container-card hidden">
-      <div class="card-one">
-        <img class="img-card-one" alt="" />
-        <h4 class="name-card-one"></h4>
-        <p class="description-card-one"></p>
-        <a class="more-information-card-one" href="#">.</a>
+    <!-- Search And Loader End -->
+
+    <!-- Popup Start -->
+    <div class="popup hidden">
+      <link href="./styles/popup.css" rel="stylesheet" type="text/css" />
+
+      <!-- POPUP CONFIG -->
+      <div class="popupConfig hidden">
+        <h2>This is the popupConfig of config of search later you login</h2>
       </div>
 
-      <div class="card-one">
-        <img class="img-card-one" alt="" />
-        <h4 class="name-card-one"></h4>
-        <p class="description-card-one"></p>
-        <a class="more-information-card-one" href="#">.</a>
+      <!-- RECORD POPUP -->
+      <div class="popupRecord hidden">
+        <h2>this is the popup of historial</h2>
       </div>
 
-      <div class="card-one">
-        <img class="img-card-one" alt="" />
-        <h4 class="name-card-one"></h4>
-        <p class="description-card-one"></p>
-        <a class="more-information-card-one" href="#">.</a>
-      </div>
-
-      <div class="card-one">
-        <img class="img-card-one" alt="" />
-        <h4 class="name-card-one"></h4>
-        <p class="description-card-one"></p>
-        <a class="more-information-card-one" href="#">.</a>
-      </div>
+      <script src="./scripts/popup.js"></script>
     </div>
-
-    <script src="script.js"></script>
+    <!-- Popup End -->
   </body>
 </html>

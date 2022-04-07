@@ -1,0 +1,269 @@
+/* Scroll hidden */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* button Page Search start */
+.btnPageSearch {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+/* button Page Search End */
+
+/* Slider */
+/* .carrousel {
+  width: 100%;
+  max-width: 120em;
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+.carrousel .container-carrousel {
+  width: 300%;
+  background-color: orange;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.container-carrousel::before {
+  position: absolute;
+  content: ""; */
+/* top: 0; */
+/* bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.carrousel .img {
+  width: calc(100% / 3);
+  min-height: 10vh;
+  background-color: lime;
+}
+.carrousel .puntos {
+  width: 100%;
+  background-color: red;
+  padding: 0.4em;
+  margin: -112px 0 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.carrousel .punto {
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 0.5em 2em;
+  list-style: none;
+  z-index: 1;
+}
+
+.carrousel .punto.activo {
+  background-color: #ffffff;
+  transform: scale(1.1);
+} */
+
+/* Slider end */
+
+/* Slider start */
+
+.container--slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.slider {
+  display: flex;
+  width: 300%;
+  max-height: 100vh;
+  margin-left: -100%;
+}
+.slider__section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* esta propiedad aunque no se necesita porque las imagenes están a medida, sin embargo la dejo por si usamos futuras imagenes con tamaños diferentes */
+  /* object-fit: cover; */
+}
+.container--slider::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  width: 80%;
+}
+.info h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5vw;
+  font-weight: 700;
+  margin: 0;
+}
+.info p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4vw;
+  font-weight: 400;
+  margin: 0;
+}
+
+.slider__btn {
+  position: absolute;
+  width: 2.3em;
+  height: 2.3em;
+  color: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.3vw;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  cursor: pointer;
+}
+.slider__btn:hover {
+  color: #ffffff;
+}
+.slider__btn--left {
+  left: 10px;
+}
+.slider__btn--right {
+  right: 10px;
+}
+/* puntos / dots Start */
+
+/* .puntos {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  padding: 0.4em;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.punto {
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 0.5em 2em;
+  list-style: none;
+  cursor: pointer;
+}
+
+.punto.activo {
+  background-color: #ffffff;
+  transform: scale(1.1);
+} */
+/* puntos / dots End */
+
+/* Slider end */
+
+/* Slicer Cards Start */
+.section {
+  position: relative;
+  height: 450px;
+  width: 1075px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  margin-left: visible;
+  overflow: visible;
+  width: 103%;
+  height: 370px;
+}
+
+section .card .image {
+  position: relative;
+  margin-top: 20px;
+  height: 340px;
+  width: 240px;
+  padding: 6px;
+}
+
+section .card .image img {
+  opacity: 0.6;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.titleCardImg {
+  color: #ffffff;
+  position: absolute;
+  top: 75%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 720px) {
+  .swiper-button-next {
+    transform: translate(-3rem, 0px);
+  }
+
+  .swiper-button-prev {
+    transform: translate(0rem, 0px);
+  }
+}
+
+@media (max-width: 721px) {
+  .swiper {
+    width: 95rem;
+    height: 33%;
+  }
+
+  .swiper-button-next {
+    transform: translate(-52rem, 0px);
+  }
+
+  .swiper-button-prev {
+    width: 3%;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.7;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+/* Slicer Cards End */
