@@ -7,7 +7,9 @@
     <title>Document</title>
     <link href="#" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
+    <!-- Page Home Start -->
     <div class="pageHome">
       <link
         rel="stylesheet"
@@ -18,9 +20,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       />
       <link href="./styles/home.css" rel="stylesheet" type="text/css" />
-      <button id="btnPageSearch" type="button">go to the page search</button>
+      <button class="btnPageSearch" type="button">go to the page search</button>
 
-      <!-- Slider -->
+      <!-- Slider Img Start -->
       <div class="container--slider">
         <!-- <div class="container--slider"> -->
         <div class="slider" id="slider">
@@ -67,15 +69,15 @@
         </div>
         <div class="slider__btn slider__btn--left" id="btn-left">&#10094;</div>
         <!-- Puntos de selección imagen -->
-        <!--       <ul class="puntos">
-    <li class="punto activo"></li>
-    <li class="punto"></li>
-    <li class="punto"></li>
-  </ul>-->
+        <!--<ul class="puntos">
+             <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+          </ul>-->
       </div>
-      <!-- Slider end -->
+      <!-- Slider Img end -->
 
-      <!-- Slicer card -->
+      <!-- Slicer Card Star -->
       <section>
         <div class="swiper mySwiper container">
           <div class="swiper-wrapper content">
@@ -163,10 +165,9 @@
               </div>
             </div>
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </section>
 
       <script src="./scripts/home.js"></script>
@@ -176,39 +177,43 @@
 
       <!-- Initialize Swiper -->
       <script>
-        let swiper = new Swiper(".mySwiper", {
-          slidesPerView: 3,
+        let swiper = new Swiper('.mySwiper', {
+          slidesPerView: 6,
           spaceBetween: 10,
-          slidesPerGroup: 3,
+          slidesPerGroup: 6,
           loop: true,
           loopFillGroupWithBlank: true,
           pagination: {
-            el: ".swiper-pagination",
+            el: '.swiper-pagination',
             clickable: true,
           },
           navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
           },
         });
       </script>
+      <!-- Slicer Card End -->
     </div>
+    <!-- Page Home End -->
 
-    <!-- BUTTON RETURN -->
+    <!-- Button Return Start -->
     <div class="hidden">
       <link href="./styles/return.css" rel="stylesheet" type="text/css" />
-      <button id="btnReturn" type="button">return page previous</button>
+      <button class="btnReturn" type="button">return page previous</button>
       <script src="./scripts/return.js"></script>
     </div>
+    <!-- Button Return End -->
 
-    <!-- lOGIN -->
+    <!-- login Start -->
     <div class="pageLogin hidden">
       <link href="./styles/login.css" rel="stylesheet" type="text/css" />
       <h2>This is the page of login</h2>
       <script src="./scripts/login.js"></script>
     </div>
+    <!-- Login End -->
 
-    <!-- SEARCH AND VIEW -->
+    <!-- Search And Loader Start -->
     <div class="pageSearch hidden">
       <link
         href="./styles/searchAndView.css"
@@ -220,10 +225,10 @@
         <div class="searchCharacters">
           <input
             type="text"
-            id="inputCharacter"
+            class="inputCharacter"
             placeholder="Search Your Character..."
           />
-          <button id="btnSearchCharacter" type="button">🔎</button>
+          <button class="btnSearchCharacter" type="button">🔎</button>
         </div>
       </div>
 
@@ -266,7 +271,9 @@
       </div>
       <script src="./scripts/searchAndView.js"></script>
     </div>
+    <!-- Search And Loader End -->
 
+    <!-- Popup Start -->
     <div class="popup hidden">
       <link href="./styles/popup.css" rel="stylesheet" type="text/css" />
 
@@ -282,5 +289,6 @@
 
       <script src="./scripts/popup.js"></script>
     </div>
+    <!-- Popup End -->
   </body>
 </html>

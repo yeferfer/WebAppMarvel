@@ -6,75 +6,6 @@ body {
   line-height: 1.6;
 }
 
-/*Search Style and Animation*/
-.searchCharacters {
-  overflow: hidden;
-  width: 50%;
-  vertical-align: middle;
-  white-space: nowrap;
-  border-radius: 10px;
-  margin: 20% auto;
-}
-
-.searchCharacters input#inputCharacter {
-  width: 100%;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 15pt;
-  float: left;
-  color: #fff;
-  padding-left: 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 10px;
-}
-
-.searchCharacters input#inputCharacter::-webkit-input-placeholder {
-  color: #65737e;
-}
-
-.searchCharacters input#inputCharacter::-moz-placeholder {
-  color: #65737e;
-}
-
-.searchCharacters button#btnSearchCharacter {
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  border: none;
-  background: #232833;
-  height: 50px;
-  width: 50px;
-  color: #4f5b66;
-  opacity: 0;
-  font-size: 10pt;
-
-  -webkit-transition: all 0.55s ease;
-  -moz-transition: all 0.55s ease;
-  -ms-transition: all 0.55s ease;
-  -o-transition: all 0.55s ease;
-  transition: all 0.55s ease;
-}
-
-.searchCharacters:hover button#btnSearchCharacter,
-.searchCharacters:active button#btnSearchCharacter,
-.searchCharacters:focus button#btnSearchCharacter {
-  outline: none;
-  opacity: 1;
-  margin-left: -65px;
-  font-size: 15pt;
-  border-radius: 10px;
-}
-
-.searchCharacters:hover button#btnSearchCharacter:hover {
-  background: white;
-}
-
 /* Loader and Animation */
 .loader-container {
   position: relative;
@@ -149,178 +80,74 @@ body {
   }
 }
 
-/* Slider */
-/* .carrousel {
-  width: 100%;
-  max-width: 120em;
-  margin: 10px auto;
+/*Search Style and Animation*/
+.searchCharacters {
   overflow: hidden;
-  position: relative;
-  border-radius: 8px;
+  width: 50%;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-radius: 10px;
+  margin: 20% auto;
 }
 
-.carrousel .container-carrousel {
-  width: 300%;
-  background-color: orange;
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-
-  transition: all 0.5s ease;
-  transform: translateX(0%);
-}
-.container-carrousel::before {
-  position: absolute;
-  content: ""; */
-/* top: 0; */
-/* bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.carrousel .img {
-  width: calc(100% / 3);
-  min-height: 10vh;
-  background-color: lime;
-}
-.carrousel .puntos {
+.searchCharacters input.inputCharacter {
   width: 100%;
-  background-color: red;
-  padding: 0.4em;
-  margin: -112px 0 0;
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-.carrousel .punto {
-  width: 0.75em;
-  height: 0.75em;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin: 0 0.5em 2em;
-  list-style: none;
-  z-index: 1;
-}
-
-.carrousel .punto.activo {
-  background-color: #ffffff;
-  transform: scale(1.1);
-} */
-
-/* Slider end */
-
-/* Slider start */
-
-.container--slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.slider {
-  display: flex;
-  width: 300%;
-  max-height: 100vh;
-  margin-left: -100%;
-}
-.slider__section {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slider__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  /* esta propiedad aunque no se necesita porque las imagenes están a medida, sin embargo la dejo por si usamos futuras imagenes con tamaños diferentes */
-  /* object-fit: cover; */
-}
-.container--slider::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.info {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 50px;
+  background: #2b303b;
+  border: none;
+  font-size: 15pt;
+  float: left;
   color: #fff;
-  width: 80%;
-}
-.info h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 3.5vw;
-  font-weight: 700;
-  margin: 0;
-}
-.info p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.4vw;
-  font-weight: 400;
-  margin: 0;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 10px;
 }
 
-.slider__btn {
-  position: absolute;
-  width: 2.3em;
-  height: 2.3em;
-  color: rgba(255, 255, 255, 0.5);
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.3vw;
-  font-weight: bold;
-  font-family: monospace;
-  text-align: center;
-  cursor: pointer;
-}
-.slider__btn:hover {
-  color: #ffffff;
-}
-.slider__btn--left {
-  left: 10px;
-}
-.slider__btn--right {
-  right: 10px;
-}
-/* puntos / dots Start */
-
-/* .puntos {
-  position: absolute;
-  top: 90%;
-  width: 100%;
-  padding: 0.4em;
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+.searchCharacters input.inputCharacter::-webkit-input-placeholder {
+  color: #65737e;
 }
 
-.punto {
-  width: 0.75em;
-  height: 0.75em;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin: 0 0.5em 2em;
-  list-style: none;
-  cursor: pointer;
+.searchCharacters input.inputCharacter::-moz-placeholder {
+  color: #65737e;
 }
 
-.punto.activo {
-  background-color: #ffffff;
-  transform: scale(1.1);
-} */
-/* puntos / dots End */
+.searchCharacters button.btnSearchCharacter {
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 
-/* Slider end */
+  border: none;
+  background: #232833;
+  height: 50px;
+  width: 50px;
+  color: #4f5b66;
+  opacity: 0;
+  font-size: 10pt;
+
+  -webkit-transition: all 0.55s ease;
+  -moz-transition: all 0.55s ease;
+  -ms-transition: all 0.55s ease;
+  -o-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+}
+
+.searchCharacters:hover button.btnSearchCharacter,
+.searchCharacters:active button.btnSearchCharacter,
+.searchCharacters:focus button.btnSearchCharacter {
+  outline: none;
+  opacity: 1;
+  margin-left: -65px;
+  font-size: 15pt;
+  border-radius: 10px;
+}
+
+.searchCharacters:hover button.btnSearchCharacter:hover {
+  background: white;
+}
 
 /* Card*/
 .container-card {
