@@ -4,15 +4,12 @@
 }
 
 /* button Page Search start */
-.btnPageSearch {
-  background-color: #4caf50; /* Green */
+.btnPageLogin {
+  background-color: transparent; /* Green */
   border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+
+  display: block;
+  margin-left: 93%;font-size: 30px;
 }
 /* button Page Search End */
 
@@ -107,6 +104,7 @@
   /* object-fit: cover; */
 }
 .container--slider::before {
+  z-index: 0;
   position: absolute;
   content: '';
   top: 0;

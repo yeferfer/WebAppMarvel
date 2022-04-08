@@ -1,8 +1,8 @@
 'use strict';
 
 //Button Page Search
-document.querySelector('.btnPageSearch').addEventListener('click', () => {
-  document.querySelector('.pageSearch').classList.remove('hidden');
+document.querySelector('.btnPageLogin').addEventListener('click', () => {
+  document.querySelector('.pageLogin').classList.remove('hidden');
   document.querySelector('.pageHome').classList.add('hidden');
 });
 

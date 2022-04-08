@@ -20,7 +20,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       />
       <link href="./styles/home.css" rel="stylesheet" type="text/css" />
-      <button class="btnPageSearch" type="button">go to the page search</button>
+      <button class="btnPageLogin" type="button">🚪</button>
 
       <!-- Slider Img Start -->
       <div class="container--slider">
@@ -208,7 +208,51 @@
     <!-- login Start -->
     <div class="pageLogin hidden">
       <link href="./styles/login.css" rel="stylesheet" type="text/css" />
-      <h2>This is the page of login</h2>
+
+      <div class="modal">
+        <div class="infoLoginContainer">
+          <div class="imgContainer">
+            <img class="imgLogin" alt="" src="./assets/LogoMarvel.jpg" />
+          </div>
+
+          <div class="credentialsLogin">
+            <aside class="textLogin">👋 Welcome !</aside>
+            <input
+              class="inputUsername inputLogin"
+              type="text"
+              placeholder="👤 @Username"
+            />
+            <input
+              class="inputPassword inputLogin"
+              type="password"
+              placeholder="🔑 **********"
+            />
+            <div class="buttonsLogin">
+              <button class="btnLogin" type="button">Login</button>
+              <button class="btnforgotPassword" type="button">
+                Forgot Your Password?
+              </button>
+              <button class="btnCreateAccount" type="button">
+                Create Account
+              </button>
+            </div>
+          </div>
+
+          <div class="reset"></div>
+        </div>
+
+        <!-- Create Account -->
+        <div class="createAccount hidden">
+          <h2>Create your own account</h2>
+        </div>
+
+        <!-- Forgot Password -->
+        <div class="forgotPassword hidden">
+          <h2>you forgot you password ?</h2>
+        </div>
+      </div>
+      <div class="overlay"></div>
+
       <script src="./scripts/login.js"></script>
     </div>
     <!-- Login End -->
