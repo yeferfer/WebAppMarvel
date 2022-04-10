@@ -3,9 +3,16 @@
   display: none;
 }
 
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
 /* button Page Search start */
 .btnPageLogin {
-  cursor: pointer;background-color: transparent; /* Green */
+  cursor: pointer;
+  background-color: transparent; /* Green */
   border: none;
 
   display: block;
