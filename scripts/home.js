@@ -14,13 +14,14 @@ window.addEventListener(
     switch (e.keyCode) {
       case 39:
         e.preventDefault();
-        break; // Space
+        break;
       default:
-        break; // do not block other keys
+        break;
     }
   },
   false
 );
+
 window.addEventListener(
   'keyup',
   function (e) {
