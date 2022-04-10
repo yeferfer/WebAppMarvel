@@ -1,35 +1,25 @@
 'use strict';
 
+//Page home
 const pageHome = document.querySelector('.pageHome');
 
+//Modal
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnOpenModal = document.querySelector('.show-modal');
 
+//Login
+const infoLoginContainer = document.querySelector('.infoLoginContainer');
 const textLogin = document.querySelector('.textLogin');
-
 const inputUsername = document.querySelector('.inputUsername');
 const inputPassword = document.querySelector('.inputPassword');
-
 const btnLogin = document.querySelector('.btnLogin');
 const btnforgotPassword = document.querySelector('.btnforgotPassword');
 const btnCreateAccount = document.querySelector('.btnCreateAccount');
 
-const infoLoginContainer = document.querySelector('.infoLoginContainer');
+//Forgot Password
 const forgotPassword = document.querySelector('.forgotPassword');
-const createAccount = document.querySelector('.singUp');
-
-const textCreateAccount = document.querySelector('.textCreateAccount');
-
-const inputUsernameSingUp = document.querySelector('.inputUsernameSingUp');
-const confirmInputUsernameSingUp = document.querySelector(
-  '.confirmInputUsernameSingUp'
-);
-const inputPasswordSingUp = document.querySelector('.inputPasswordSingUp ');
-
-const btnRegister = document.querySelector('.btnRegister');
-
 const textNewPassword = document.querySelector('.textNewPassword');
 const inputUsernameNewPassword = document.querySelector(
   '.inputUsernameNewPassword'
@@ -39,11 +29,23 @@ const newPassword = document.querySelector('.newPassword');
 const confirmNewpassword = document.querySelector('.confirmNewpassword');
 const btnChangePassword = document.querySelector('.btnChangePassword');
 
+//Create Account
+const createAccount = document.querySelector('.singUp');
+const textCreateAccount = document.querySelector('.textCreateAccount');
+const inputUsernameSingUp = document.querySelector('.inputUsernameSingUp');
+const confirmInputUsernameSingUp = document.querySelector(
+  '.confirmInputUsernameSingUp'
+);
+const inputPasswordSingUp = document.querySelector('.inputPasswordSingUp ');
+const btnRegister = document.querySelector('.btnRegister');
+
+//user
 const user = [
   { nameUser: 'alejo', passwordUser: '1234' },
   { nameUser: 'yefer', passwordUser: '1234' },
 ];
 
+//Fuction Block KeyCode
 const openModal = function () {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
@@ -72,6 +74,7 @@ const openModal = function () {
   );
 };
 
+//Fuction Close Modal and Reset Cases
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
@@ -92,18 +95,19 @@ const closeModal = function () {
   textLogin.textContent = '👋 Welcome !';
 };
 
+//Open modal
 btnOpenModal.addEventListener('click', openModal);
 
+//Close Modal
 btnCloseModal.addEventListener('click', closeModal);
-
 overlay.addEventListener('click', closeModal);
-
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
     closeModal();
   }
 });
 
+//Case Login Modal
 btnLogin.addEventListener('click', () => {
   if (
     user.some(
@@ -124,19 +128,12 @@ btnLogin.addEventListener('click', () => {
   }
 });
 
+//Case Create User
 btnCreateAccount.addEventListener('click', () => {
   infoLoginContainer.classList.add('hidden');
   createAccount.classList.remove('hidden');
 });
 
-btnforgotPassword.addEventListener('click', () => {
-  infoLoginContainer.classList.add('hidden');
-  forgotPassword.classList.remove('hidden');
-  modal.classList.add('modalChangePassword');
-  btnCloseModal.classList.add('close-modal-Change-Password');
-});
-
-// Create Account
 btnRegister.addEventListener('click', () => {
   let newUserName = inputUsernameSingUp.value;
   let validationNewUserName = confirmInputUsernameSingUp.value;
@@ -177,7 +174,13 @@ btnRegister.addEventListener('click', () => {
   }
 });
 
-//Forgot Password
+//Case Forgot Password
+btnforgotPassword.addEventListener('click', () => {
+  infoLoginContainer.classList.add('hidden');
+  forgotPassword.classList.remove('hidden');
+  modal.classList.add('modalChangePassword');
+  btnCloseModal.classList.add('close-modal-Change-Password');
+});
 
 btnSearchUser.addEventListener('click', () => {
   if (
