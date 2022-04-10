@@ -6,6 +6,30 @@ document.querySelector('.btnPageLogin').addEventListener('click', () => {
   document.querySelector('.pageHome').classList.add('hidden');
 });
 
+let keys = {};
+window.addEventListener(
+  'keydown',
+  function (e) {
+    keys[e.keyCode] = true;
+    switch (e.keyCode) {
+      case 39:
+        e.preventDefault();
+        break;
+      default:
+        break;
+    }
+  },
+  false
+);
+
+window.addEventListener(
+  'keyup',
+  function (e) {
+    keys[e.keyCode] = false;
+  },
+  false
+);
+
 const lyrics = [
   'a',
   'b',

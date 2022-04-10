@@ -20,7 +20,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       />
       <link href="./styles/home.css" rel="stylesheet" type="text/css" />
-      <button class="btnPageLogin" type="button">🚪</button>
+      <button class="btnPageLogin show-modal" type="button">🚪</button>
 
       <!-- Slider Img Start -->
       <div class="container--slider">
@@ -206,10 +206,9 @@
     <!-- Button Return End -->
 
     <!-- login Start -->
-    <div class="pageLogin hidden">
-      <link href="./styles/login.css" rel="stylesheet" type="text/css" />
-
-      <div class="modal">
+    <link href="./styles/login.css" rel="stylesheet" type="text/css" />
+      <div class="modal hidden">
+        <button class="close-modal" type="button">&times;</button>
         <div class="infoLoginContainer">
           <div class="imgContainer">
             <img class="imgLogin" alt="" src="./assets/LogoMarvel.jpg" />
@@ -242,16 +241,49 @@
         </div>
 
         <!-- Create Account -->
-        <div class="createAccount hidden">
-          <h2>Create your own account</h2>
+        <div class="singUp hidden">
+          <aside class="textCreateAccount">Sing Up</aside>
+          <input
+            class="inputUsernameSingUp inputSingUp"
+            type="text"
+            placeholder="👤 @Username"
+          />
+          <input
+            class="confirmInputUsernameSingUp inputSingUp"
+            type="text"
+            placeholder="👥 @Confirm Username"
+          />
+          <input
+            class="inputPasswordSingUp inputSingUp"
+            type="password"
+            placeholder="🔑 **********"
+          />
+          <button class="btnRegister" type="button">Register</button>
         </div>
 
         <!-- Forgot Password -->
         <div class="forgotPassword hidden">
-          <h2>you forgot you password ?</h2>
+          <aside class="textNewPassword">Recover password</aside>
+          <input
+            class="inputUsernameNewPassword inputNewPassword"
+            type="text"
+            placeholder="👤 @Username"
+          />
+          <button class="btnSearchUser" type="button">Search</button>
+          <input
+            class="newPassword inputNewPassword hidden"
+            type="password"
+            placeholder="🔑 New password"
+          />
+          <input
+            class="confirmNewpassword inputNewPassword hidden"
+            type="password"
+            placeholder="🔑 Confirm password"
+          />
+          <button class="btnChangePassword hidden" type="button">Confirm</button>
         </div>
       </div>
-      <div class="overlay"></div>
+      <div class="overlay hidden"></div>
 
       <script src="./scripts/login.js"></script>
     </div>
