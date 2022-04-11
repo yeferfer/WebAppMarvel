@@ -6,6 +6,90 @@ body {
   line-height: 1.6;
 }
 
+/* Buttons Page Search Start */
+.containerButtons {
+  width: 100%;
+  padding: 0px;
+  display: flex;
+}
+
+.btnsSearch {
+  margin-top: 30px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 30px;
+}
+
+.btnHome {
+  margin-left: 2%;
+}
+
+.textSearchName {
+  width: max-content;
+  color: white;
+  margin-left: 36%;
+padding: 0px;}
+
+.btnConfig {
+  margin-right: 1%;
+}
+
+.btnsUserConfig {
+  color: black;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  font-size: 22px;
+  padding: 15px 10px;
+  display: inline-block;
+  width: max-content;
+  transform: translate(-13px, 0px);
+}
+
+.btnClearHistory {
+  margin-top: -25px;
+}
+
+.btnCloseSession {
+  margin-top: 30px;
+  transform: translate(-19px, 0px);
+}
+
+.btnHistory {
+  margin-left: 31%;
+  margin-right: 20px;
+}
+/* Buttons Page Search End */
+
+/* Modal Start */
+.show-modal-Search {
+  cursor: pointer;
+}
+
+.modalSearch {
+  position: fixed;
+  top: 35%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  background-color: #ffffff;
+  padding: 5rem;
+  border-radius: 20px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  height: max-content;
+}
+
+.overlaySearch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+/* Modal End */
+
 /* Loader and Animation */
 .loader-container {
   position: relative;
@@ -21,8 +105,8 @@ body {
   width: 100%;
   height: 100%;
   border: solid 8px transparent;
-  border-top-color: #00a2ff;
-  border-left-color: #00a2ff;
+  border-top-color: #ef5c43;
+  border-left-color: #ef5c43;
   border-radius: 50%;
   animation: loader 1.2s linear infinite;
 }
@@ -34,8 +118,8 @@ body {
   width: 70%;
   height: 70%;
   border: solid 8px transparent;
-  border-top-color: #ff2020;
-  border-left-color: #ff2020;
+  border-top-color: #518cca;
+  border-left-color: #518cca;
   border-radius: 50%;
   animation: loader2 1.4s linear infinite;
 }
@@ -47,8 +131,8 @@ body {
   width: 40%;
   height: 40%;
   border: solid 8px transparent;
-  border-top-color: #03ac3b;
-  border-left-color: #03ac3b;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
   border-radius: 50%;
   animation: loader2 1.8s linear infinite;
 }
@@ -199,4 +283,47 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 1020px) {
+  .btnsSearch {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .textSearchName {
+    margin-left: 23%;
+    margin-top: 35px;
+    font-size: 20px;
+    margin-right: -9%;
+    
+    transform: translate(15px, 0px);
+  }
+
+  .btnHome {
+    margin-left: 17px;
+    margin-right: 13px;
+  }
+
+  .btnHistory {
+    margin-left: 14%;
+  }
+
+  .btnsUserConfig {
+    transform: translate(-55px, 0px);
+  }
+
+  .btnCloseSession {
+    transform: translate(-60px, 0px);
+  }
+
+  .btnHistory {
+    margin-left: 31%;
+    margin-right: 20px;
+  }
+
+  .modalSearch {
+    top: 30%;
+    left: 80%;
+  }
 }

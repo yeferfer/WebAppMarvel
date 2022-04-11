@@ -9,10 +9,10 @@
 
 .close-modal {
   position: absolute;
-  top: 0.2rem;
-  right: 1rem;
-  font-size: 5rem;
-  color: #333;
+  top: 9px;
+  right: 25px;
+  font-size: 4rem;
+  color: #000;
   cursor: pointer;
   border: none;
   background: none;
@@ -323,9 +323,9 @@ btnchangePassword div.reset {
 
   .close-modal {
     position: absolute;
-    top: -0.4rem;
-    right: 0.5rem;
-    font-size: 4rem;
+    top: 10px;
+    right: 16px;
+    font-size: 40px;
   }
   /* Moda RS End */
 
@@ -369,12 +369,11 @@ btnchangePassword div.reset {
   }
 
   .btnforgotPassword {
-    margin-top: 4%;
+    margin-top: 21%;
     margin-left: 23%;
     font-size: 13px;
-    padding-top: 29px;
-    width: max-content;
-  }
+;
+  width: max-content;}
 
   .buttonsLogin {
     padding-left: 10px;

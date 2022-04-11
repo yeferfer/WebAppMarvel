@@ -44,6 +44,7 @@ const user = [
   { nameUser: 'alejo', passwordUser: '1234' },
   { nameUser: 'yefer', passwordUser: '1234' },
 ];
+let currentUser;
 
 //Fuction Block KeyCode
 const openModal = function () {
@@ -116,6 +117,14 @@ btnLogin.addEventListener('click', () => {
         element.passwordUser === inputPassword.value
     )
   ) {
+    currentUser = user.filter(
+      element =>
+        element.nameUser === inputUsername.value &&
+        element.passwordUser === inputPassword.value
+    )[0]?.nameUser;
+    document.querySelector(
+      '.textSearchName'
+    ).textContent = `WELCOME ${currentUser.toUpperCase()}!`;
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
     pageHome.classList.add('hidden');
