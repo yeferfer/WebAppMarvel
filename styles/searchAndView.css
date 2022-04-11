@@ -8,13 +8,17 @@ body {
 
 /* Buttons Page Search Start */
 .containerButtons {
+  background: black;
   width: 100%;
-  padding: 0px;
+  padding: 5px 0px;
   display: flex;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .btnsSearch {
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color: transparent;
   color: white;
   border: none;
@@ -29,7 +33,8 @@ body {
   width: max-content;
   color: white;
   margin-left: 36%;
-padding: 0px;}
+  padding: 0px;
+}
 
 .btnConfig {
   margin-right: 1%;
@@ -293,10 +298,10 @@ padding: 0px;}
 
   .textSearchName {
     margin-left: 23%;
-    margin-top: 35px;
+    margin-top: 20px;
     font-size: 20px;
     margin-right: -9%;
-    
+
     transform: translate(15px, 0px);
   }
 
