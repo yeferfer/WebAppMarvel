@@ -11,13 +11,15 @@ body {
 
 /* button Page Search start */
 .btnPageLogin {
-  cursor: pointer;
-  background-color: transparent; /* Green */
+  color: white;
+  z-index: 2;
+  position: absolute;
+  background-color: transparent;
   border: none;
-
-  display: block;
-  margin-left: 93%;
-  font-size: 30px;
+  margin-left: 92%;
+  margin-top: -5%;
+  font-size: 40px;
+  transform: translate(40px, 95px);
 }
 /* button Page Search End */
 
@@ -235,29 +237,12 @@ section .card .image img {
   transform: translate(-50%, -50%);
 }
 
-@media (min-width: 720px) {
-  .swiper-button-next {
-    transform: translate(-3rem, 0px);
-  }
-
-  .swiper-button-prev {
-    transform: translate(0rem, 0px);
-  }
+.swiper-button-prev {
+  transform: translate(0rem, 0px);
 }
 
-@media (max-width: 721px) {
-  .swiper {
-    width: 95rem;
-    height: 33%;
-  }
-
-  .swiper-button-next {
-    transform: translate(-52rem, 0px);
-  }
-
-  .swiper-button-prev {
-    width: 3%;
-  }
+.swiper-button-next {
+  transform: translate(-3rem, 0px);
 }
 
 .swiper-button-next,
@@ -273,3 +258,27 @@ section .card .image img {
   color: #ffffff;
 }
 /* Slicer Cards End */
+
+/* Responsive Start */
+@media (max-width: 1024px) {
+  /* Button Login */
+  .btnPageLogin {
+    transform: translate(0px, 50px);
+    font-size: 30px;
+  }
+
+  /* Slider Cards */
+  .swiper {
+    width: 95rem;
+    height: 33%;
+  }
+
+  .swiper-button-next {
+    transform: translate(-50rem, 0px);
+  }
+
+  .swiper-button-prev {
+    width: 3%;
+  }
+}
+/* Responsive End */

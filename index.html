@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/3d835e4921.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <link href="#" rel="stylesheet" type="text/css" />
   </head>
@@ -20,10 +21,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       />
       <link href="./styles/home.css" rel="stylesheet" type="text/css" />
-      <button class="btnPageLogin show-modal" type="button">🚪</button>
 
       <!-- Slider Img Start -->
       <div class="container--slider">
+      <button class="btnPageLogin show-modal" type="button" title="Login"><i class="fa-solid fa-circle-user"></i></button>
         <!-- <div class="container--slider"> -->
         <div class="slider" id="slider">
           <div class="slider__section">
@@ -197,18 +198,10 @@
     </div>
     <!-- Page Home End -->
 
-    <!-- Button Return Start -->
-    <div class="hidden">
-      <link href="./styles/return.css" rel="stylesheet" type="text/css" />
-      <button class="btnReturn" type="button">return page previous</button>
-      <script src="./scripts/return.js"></script>
-    </div>
-    <!-- Button Return End -->
-
     <!-- login Start -->
     <link href="./styles/login.css" rel="stylesheet" type="text/css" />
       <div class="modal hidden">
-        <button class="close-modal" type="button">&times;</button>
+        <button class="close-modal" type="button" title="Close"><i class="fa-solid fa-xmark"></i></button>
         <div class="infoLoginContainer">
           <div class="imgContainer">
             <img class="imgLogin" alt="" src="./assets/LogoMarvel.jpg" />
@@ -290,12 +283,28 @@
     <!-- Login End -->
 
     <!-- Search And Loader Start -->
-    <div class="pageSearch hidden">
-      <link
+    <link
         href="./styles/searchAndView.css"
         rel="stylesheet"
         type="text/css"
       />
+    <div class="pageSearch hidden">
+    
+      <!-- Buttons Page Search Start-->
+      <div class="containerButtons"> 
+          <button class="btnHome btnsSearch" type="button" title="Home"><i class="fa-solid fa-house"></i></button>
+          <h2 class="textSearchName btnsSearch"></h2>
+          <button class="btnHistory btnsSearch" type="button" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button>
+          <button class="btnConfig btnsSearch show-modal-Search" type="button" title="Config"><i class="fa-solid fa-user-gear"></i></button>
+      </div>
+      
+      <div class="modalSearch hidden">
+        <button class="btnClearHistory btnsUserConfig" type="button" title="Clear History">Clear History <i class="fa-solid fa-broom"></i></button>
+        <button class="btnCloseSession btnsUserConfig" type="button" title="Close Session">Close Session <i class="fa-solid fa-user-xmark"></i></button>
+      </div>
+      <div class="overlaySearch hidden"></div>
+        <div class="reset"></div>
+
       <!-- Search -->
       <div class="" box>
         <div class="searchCharacters">
@@ -304,12 +313,11 @@
             class="inputCharacter"
             placeholder="Search Your Character..."
           />
-          <button class="btnSearchCharacter" type="button">🔎</button>
+          <button class="btnSearchCharacter" type="button" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </div>
 
       <!-- Card -->
-
       <div class="loader-container hidden">
         <div class="loader"></div>
         <div class="loader2"></div>
@@ -349,22 +357,5 @@
     </div>
     <!-- Search And Loader End -->
 
-    <!-- Popup Start -->
-    <div class="popup hidden">
-      <link href="./styles/popup.css" rel="stylesheet" type="text/css" />
-
-      <!-- POPUP CONFIG -->
-      <div class="popupConfig hidden">
-        <h2>This is the popupConfig of config of search later you login</h2>
-      </div>
-
-      <!-- RECORD POPUP -->
-      <div class="popupRecord hidden">
-        <h2>this is the popup of historial</h2>
-      </div>
-
-      <script src="./scripts/popup.js"></script>
-    </div>
-    <!-- Popup End -->
   </body>
 </html>
