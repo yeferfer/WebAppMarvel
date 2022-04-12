@@ -1,25 +1,37 @@
 'use strict';
 
-//HTML Components
+//Page Search
+const pageSearch = document.querySelector('.page-search');
+const goToPageHome = document.querySelector('.page-home');
 
-//Pages
-const pageSearch = document.querySelector('.pageSearch');
+//Button Home
+const btnHome = document.querySelector('.btn-home');
 
-//BtnPageSearch
-const btnBack = document.querySelector('.btnHome');
-const btnHistory = document.querySelector('.btnHistory');
-const btnConfig = document.querySelector('.btnConfig');
+//Button Search History
+const btnHistory = document.querySelector('.btn-history');
+const containerHistory = document.querySelector('.container-history');
+const btnSearchHistory = document.querySelector('.btn-search-history');
+const inputHistory = document.querySelector('.input-history');
+
+//Button Config User and History
+const btnCloseSession = document.querySelector('.btn-close-session');
+const btnConfig = document.querySelector('.btn-config');
+const btnClearHistory = document.querySelector('.btn-clear-history');
+//Modal
+const modalSearch = document.querySelector('.modal-search');
+const overlaySearch = document.querySelector('.overlay-search');
+const btnshowModalSearch = document.querySelector('.show-modal-Search');
 
 //Search
-const searchCharacters = document.querySelector('.searchCharacters');
-const btnSearchCharacter = document.querySelector('.btnSearchCharacter');
-const inputCharacter = document.querySelector('.inputCharacter');
+const searchCharacters = document.querySelector('.search-characters');
+const btnSearchCharacter = document.querySelector('.btn-search-character');
+const inputCharacter = document.querySelector('.input-character');
 
 //loader
 const loaderContainer = document.querySelector('.loader-container');
 
 //Slider
-const carrousel = document.querySelector('.container--slider');
+const carrousel = document.querySelector('.container-slider');
 
 //Card
 const imgCardOne = document.querySelectorAll('.img-card-one');
@@ -30,67 +42,65 @@ const moreInformationCardOne = document.querySelectorAll(
   '.more-information-card-one'
 );
 
-//Modal
-const modalSearch = document.querySelector('.modalSearch');
-const overlaySearch = document.querySelector('.overlaySearch');
-const btnshowModalSearch = document.querySelector('.show-modal-Search');
+//Function Hide
+const hide = element => {
+  element.classList.toggle('hidden');
+};
 
-//come back to Home page
-btnBack.addEventListener('click', () => {
-  document.querySelector('.pageSearch').classList.add('hidden');
-  document.querySelector('.pageHome').classList.remove('hidden');
-  document.querySelector('.btnPageLogin').addEventListener('click', () => {
-    document.querySelector('.pageSearch').classList.remove('hidden');
-    document.querySelector('.pageHome').classList.add('hidden');
-    document.querySelector('.modal').classList.add('hidden');
-    document.querySelector('.overlay').classList.add('hidden');
+//Come Back to Home page
+btnHome.addEventListener('click', () => {
+  hide(pageSearch);
+  hide(goToPageHome);
+  document.querySelector('.btn-page-login').addEventListener('click', () => {
+    hide(pageSearch);
+    hide(goToPageHome);
+    hide(document.querySelector('.modal'));
+    hide(document.querySelector('.overlay'));
   });
 });
 
-const btnCloseSession = document.querySelector('.btnCloseSession');
+//Show History
+btnHistory.addEventListener('click', () => {
+  hide(containerHistory);
+});
 
+//Button Search History
+btnSearchHistory.addEventListener('click', () => {
+  inputCharacter.value = inputHistory.value;
+  hide(containerHistory);
+  hide(loaderContainer);
+  clearInterval(passCarousel);
+  carousels();
+});
+
+//Close Session
 btnCloseSession.addEventListener('click', () => {
   location.reload();
 });
-//Fuction Block KeyCode
+
+//Clear History
+btnClearHistory.addEventListener('click', () => {
+  document.querySelectorAll('.history-items').forEach(element => {
+    element.remove();
+  });
+});
+
+//Fuction Open Modal Config
 const openModalSearch = function () {
-  modalSearch.classList.remove('hidden');
-  overlaySearch.classList.remove('hidden');
-  let keys = {};
-  window.addEventListener(
-    'keydown',
-    function (e) {
-      keys[e.keyCode] = true;
-      switch (e.keyCode) {
-        case 40:
-          e.preventDefault();
-          break;
-        default:
-          break;
-      }
-    },
-    false
-  );
-
-  window.addEventListener(
-    'keyup',
-    function (e) {
-      keys[e.keyCode] = false;
-    },
-    false
-  );
+  hide(modalSearch);
+  hide(overlaySearch);
 };
 
-//Fuction Close Modal and Reset Cases
+//Fuction Close Modal Config
 const closeModalSearch = function () {
-  modalSearch.classList.add('hidden');
-  overlaySearch.classList.add('hidden');
+  hide(modalSearch);
+  hide(overlaySearch);
 };
 
-//Open modal
+//Open Modal Search
 btnshowModalSearch.addEventListener('click', openModalSearch);
 
-//Close Modal
+//Close Modal Search
 overlaySearch.addEventListener('click', closeModalSearch);
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalSearch.classList.contains('hidden')) {
@@ -98,11 +108,17 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// btnConfig.addEventListener('click', () => {
-//   modalSearch.classList.remove('hidden');
-// });
+//Button Search Characters
+btnSearchCharacter.addEventListener('click', () => {
+  const html = `<option class="history-items" value="${inputCharacter.value}"/>`;
+  document.getElementById('character').insertAdjacentHTML('afterbegin', html);
+  hide(loaderContainer);
+  clearInterval(passCarousel);
+  carousels();
+  searchCharacters.style.margin = '5% auto';
+});
 
-//This is the function that retrieves the information in the API for the carousels
+//Fuction Get Info API
 const getData = async function (character) {
   try {
     const request = await fetch(
@@ -116,7 +132,7 @@ const getData = async function (character) {
   }
 };
 
-// This is the carousel function
+//Fuction Carrousel
 let passCarousel;
 const carousels = () => {
   const allSpecificData = new Array();
@@ -135,7 +151,7 @@ const carousels = () => {
     });
   });
 
-  //pass image
+  //Pass Image
   let cont = 0;
   passCarousel = setInterval(() => {
     try {
@@ -162,7 +178,6 @@ const carousels = () => {
       loaderContainer.classList.add('hidden');
       carrousel.classList.remove('hidden');
       containerCard[0].classList.remove('hidden');
-
       cont++;
     } catch (err) {
       console.error(`${err.message} 😐`);
@@ -170,11 +185,3 @@ const carousels = () => {
     }
   }, 5000);
 };
-
-//Button Search Characters
-btnSearchCharacter.addEventListener('click', () => {
-  loaderContainer.classList.remove('hidden');
-  clearInterval(passCarousel);
-  carousels();
-  searchCharacters.style.margin = '5% auto';
-});

@@ -7,16 +7,16 @@ body {
 }
 
 /* Buttons Page Search Start */
-.containerButtons {
-  background: black;
-  width: 100%;
+.container-buttons {
+  background: #0000004f;
+  
   padding: 5px 0px;
   display: flex;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-}
+border: 2px solid #eee;}
 
-.btnsSearch {
+.btns-search {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: transparent;
@@ -25,22 +25,22 @@ body {
   font-size: 30px;
 }
 
-.btnHome {
+.btn-home {
   margin-left: 2%;
 }
 
-.textSearchName {
+.text-search-name {
   width: max-content;
   color: white;
   margin-left: 36%;
   padding: 0px;
 }
 
-.btnConfig {
-  margin-right: 1%;
+.btn-config {
+  margin-right: 0%;
 }
 
-.btnsUserConfig {
+.btns-user-config {
   color: black;
   border-radius: 10px;
   border: 3px solid #000000;
@@ -51,19 +51,61 @@ body {
   transform: translate(-13px, 0px);
 }
 
-.btnClearHistory {
+.btn-clear-history {
   margin-top: -25px;
 }
 
-.btnCloseSession {
+.btn-close-session {
   margin-top: 30px;
   transform: translate(-19px, 0px);
 }
 
-.btnHistory {
-  margin-left: 31%;
+.btn-history {
+  margin-left: 30%;
   margin-right: 20px;
 }
+
+.container-history {
+  margin-top: 4%;
+  margin-left: 35%;
+
+  width: 100%;
+  display: flex;
+}
+
+.input-history {
+  font-family: inherit;
+  width: 27%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form-history {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: gray;
+}
+
+.btn-search-history {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
 /* Buttons Page Search End */
 
 /* Modal Start */
@@ -71,10 +113,10 @@ body {
   cursor: pointer;
 }
 
-.modalSearch {
+.modal-search {
   position: fixed;
-  top: 35%;
-  left: 85%;
+  top: 30%;
+  left: 89%;
   transform: translate(-50%, -50%);
   width: 10%;
   background-color: #ffffff;
@@ -85,7 +127,7 @@ body {
   height: max-content;
 }
 
-.overlaySearch {
+.overlay-search {
   position: fixed;
   top: 0;
   left: 0;
@@ -170,7 +212,7 @@ body {
 }
 
 /*Search Style and Animation*/
-.searchCharacters {
+.search-characters {
   overflow: hidden;
   width: 50%;
   vertical-align: middle;
@@ -179,7 +221,7 @@ body {
   margin: 20% auto;
 }
 
-.searchCharacters input.inputCharacter {
+.search-characters input.input-character {
   width: 100%;
   height: 50px;
   background: #2b303b;
@@ -193,15 +235,15 @@ body {
   border-radius: 10px;
 }
 
-.searchCharacters input.inputCharacter::-webkit-input-placeholder {
+.search-characters input.input-character::-webkit-input-placeholder {
   color: #65737e;
 }
 
-.searchCharacters input.inputCharacter::-moz-placeholder {
+.search-characters input.input-character::-moz-placeholder {
   color: #65737e;
 }
 
-.searchCharacters button.btnSearchCharacter {
+.search-characters button.btn-search-character {
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-topright: 5px;
@@ -224,9 +266,9 @@ body {
   transition: all 0.55s ease;
 }
 
-.searchCharacters:hover button.btnSearchCharacter,
-.searchCharacters:active button.btnSearchCharacter,
-.searchCharacters:focus button.btnSearchCharacter {
+.search-characters:hover button.btn-search-character,
+.search-characters:active button.btn-search-character,
+.search-characters:focus button.btn-search-character {
   outline: none;
   opacity: 1;
   margin-left: -65px;
@@ -234,7 +276,7 @@ body {
   border-radius: 10px;
 }
 
-.searchCharacters:hover button.btnSearchCharacter:hover {
+.search-characters:hover button.btn-search-character:hover {
   background: white;
 }
 
@@ -291,12 +333,12 @@ body {
 }
 
 @media (max-width: 1020px) {
-  .btnsSearch {
+  .btns-search {
     font-size: 30px;
     margin-top: 20px;
   }
 
-  .textSearchName {
+  .text-search-name {
     margin-left: 23%;
     margin-top: 20px;
     font-size: 20px;
@@ -305,29 +347,29 @@ body {
     transform: translate(15px, 0px);
   }
 
-  .btnHome {
+  .btn-home {
     margin-left: 17px;
     margin-right: 13px;
   }
 
-  .btnHistory {
+  .btn-history {
     margin-left: 14%;
   }
 
-  .btnsUserConfig {
+  .btns-user-config {
     transform: translate(-55px, 0px);
   }
 
-  .btnCloseSession {
+  .btn-close-session {
     transform: translate(-60px, 0px);
   }
 
-  .btnHistory {
+  .btn-history {
     margin-left: 31%;
     margin-right: 20px;
   }
 
-  .modalSearch {
+  .modal-search {
     top: 30%;
     left: 80%;
   }
