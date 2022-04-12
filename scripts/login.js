@@ -130,8 +130,11 @@ btnLogin.addEventListener('click', () => {
     pageHome.classList.add('hidden');
     document.querySelector('.pageSearch').classList.remove('hidden');
   } else {
+    if (user.some(element => element.nameUser !== inputUsername.value))
+      textLogin.textContent = 'User not found 😐';
+    if (user.some(element => element.passwordUser !== inputPassword.value))
+      textLogin.textContent = 'Invalid password 😐';
     textLogin.style.color = '#FF0000';
-    textLogin.textContent = 'User not found 😐';
     inputUsername.value = '';
     inputPassword.value = '';
   }
