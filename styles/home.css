@@ -10,7 +10,7 @@ body {
 }
 
 /* button Page Search start */
-.btnPageLogin {
+.btn-page-login {
   color: white;
   z-index: 2;
   position: absolute;
@@ -89,7 +89,7 @@ body {
 
 /* Slider start */
 
-.container--slider {
+.container-slider {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -100,20 +100,20 @@ body {
   max-height: 100vh;
   margin-left: -100%;
 }
-.slider__section {
+.slider-section {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.slider__img {
+.slider-img {
   display: block;
   width: 100%;
   height: 100%;
   /* esta propiedad aunque no se necesita porque las imagenes están a medida, sin embargo la dejo por si usamos futuras imagenes con tamaños diferentes */
   /* object-fit: cover; */
 }
-.container--slider::before {
+.container-slider::before {
   z-index: 0;
   position: absolute;
   content: '';
@@ -229,7 +229,7 @@ section .card .image img {
   object-fit: cover;
 }
 
-.titleCardImg {
+.card-img-title {
   color: #ffffff;
   position: absolute;
   top: 75%;
@@ -262,7 +262,7 @@ section .card .image img {
 /* Responsive Start */
 @media (max-width: 1024px) {
   /* Button Login */
-  .btnPageLogin {
+  .btn-page-login {
     transform: translate(0px, 50px);
     font-size: 30px;
   }

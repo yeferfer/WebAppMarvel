@@ -32,7 +32,7 @@
   height: max-content;
 }
 
-.modalChangePassword {
+.modal-change-password {
   width: 25%;
 }
 
@@ -53,23 +53,23 @@
 /* Modal End */
 
 /* Login Start */
-.imgContainer {
+.img-container {
   transform: translate(-41px, 4px);
 }
 
-.imgLogin {
+.img-login {
   transform: scale(1.76);
   width: 20%;
   border-top-left-radius: 5%;
   border-bottom-left-radius: 5%;
 }
 
-.credentialsLogin {
+.credentials-login {
   padding: 1% 7%;
   margin-left: 39%;
 }
 
-.textLogin {
+.text-login {
   font-size: xx-large;
   margin-left: 15%;
   color: #000000;
@@ -77,7 +77,7 @@
   margin-bottom: -40px;
 }
 
-.inputLogin {
+.input-login {
   padding: 12px 82px;
   border: 2px solid #100;
   color: #100;
@@ -85,12 +85,12 @@
   border-radius: 5px;
 }
 
-.inputUsername {
+.input-username {
   margin-top: 57px;
   margin-bottom: 20px;
 }
 
-.btnLogin {
+.btn-login {
   background-color: #ef5c43;
   border: 2px solid #100;
   text-align: center;
@@ -107,7 +107,7 @@
   cursor: pointer;
 }
 
-.btnforgotPassword {
+.btn-forgot-password {
   border: none;
   display: block;
   color: #000000;
@@ -120,7 +120,7 @@
   margin-top: 6.3%;
 }
 
-.btnCreateAccount {
+.btn-create-account {
   border: none;
   display: block;
   color: #000000;
@@ -134,12 +134,12 @@
   margin-top: 14%;
 }
 
-div.infoLoginContainer {
+div.info-login-container {
   width: 100%;
   margin: auto;
 }
 
-div.infoLoginContainer img.imgLogin {
+div.info-login-container img.img-login {
   float: left;
   margin-right: 15px;
 }
@@ -153,29 +153,29 @@ div.reset {
   vertical-align: top;
 }
 
-.buttonsLogin {
+.buttons-login {
   margin-bottom: -17px;
 }
 /* Login end */
 
 /* Sign Up Start */
-.singUp {
+.sing-up {
   padding: 0% 7%;
   margin-left: 39%;
 }
 
-div.singUp {
+div.sing-up {
   width: 100%;
   margin: auto;
 }
 
-div.singUp {
+div.sing-up {
   float: right;
   margin-right: -10%;
   margin-bottom: -3%;
 }
 
-.textCreateAccount {
+.text-create-account {
   font-size: xx-large;
   margin-left: 0%;
   color: #000000;
@@ -184,7 +184,7 @@ div.singUp {
   width: max-content;
 }
 
-.inputSingUp {
+.input-sing-up {
   padding: 19px 102px;
   border: 2px solid #100;
   color: #100;
@@ -193,17 +193,17 @@ div.singUp {
   font-size: 18px;
 }
 
-.inputUsername {
+.input-username {
   margin-top: 47px;
   margin-bottom: 26px;
 }
 
-.inputUsernameSingUp {
+.input-username-sing-up {
   margin-top: 46px;
   margin-bottom: 30px;
 }
 
-.btnRegister {
+.btn-register {
   background-color: #518cca;
   border: 2px solid #100;
   text-align: center;
@@ -226,23 +226,23 @@ div.reset {
 /* Sign Up End */
 
 /* Change Password Start */
-.forgotPassword {
+.forgot-password {
   padding: 0% 7%;
   margin-left: 39%;
 }
 
-div.forgotPassword {
+div.forgot-password {
   width: 100%;
   margin: auto;
 }
 
-div.forgotPassword {
+div.forgot-password {
   float: right;
   margin-right: 20%;
   margin-bottom: 0%;
 }
 
-.textNewPassword {
+.text-new-password {
   font-size: xx-large;
   margin-left: 0%;
   color: #000000;
@@ -251,7 +251,7 @@ div.forgotPassword {
   width: max-content;
 }
 
-.inputNewPassword {
+.input-new-password {
   margin-top: 10%;
   margin-left: 19%;
   padding: 19px 102px;
@@ -262,12 +262,12 @@ div.forgotPassword {
   font-size: 18px;
 }
 
-.inputUsernameSingUp {
+.input-username-sing-up {
   margin-top: 36px;
   margin-bottom: 35px;
 }
 
-.btnSearchUser {
+.btn-search-user {
   background-color: #518cca;
   border: 2px solid #100;
   text-align: center;
@@ -284,17 +284,17 @@ div.forgotPassword {
   cursor: pointer;
 }
 
-.newPassword {
+.new-password {
   margin-top: 27px;
   margin-bottom: 26px;
 }
 
-.confirmNewpassword {
+.confirm-new-password {
   margin-top: 0px;
   margin-bottom: 30px;
 }
 
-.btnChangePassword {
+.btn-change-password {
   background-color: #ef5c43;
   border: 2px solid #100;
   text-align: center;
@@ -330,36 +330,36 @@ btnchangePassword div.reset {
   /* Moda RS End */
 
   /* Login RS Strat*/
-  .imgLogin {
+  .img-login {
     transform: scale(3.2);
   }
 
-  .imgContainer {
+  .img-container {
     transform: translate(-45px, 44px);
   }
 
-  .textLogin {
+  .text-login {
     width: max-content;
     font-size: 22px;
   }
 
-  .inputLogin {
+  .input-login {
     padding: 15px 40px;
     margin-top: 9%;
     margin-left: -14px;
   }
 
-  .inputUsername {
+  .input-username {
     margin-top: 17px;
     margin-bottom: 0px;
   }
 
-  .inputUsernameSingUp {
+  .input-username-sing-up {
     margin-top: 46px;
     margin-bottom: 0px;
   }
 
-  .btnLogin {
+  .btn-login {
     padding: 10px 100px;
     font-size: 12px;
     border-radius: 10px;
@@ -368,37 +368,37 @@ btnchangePassword div.reset {
     margin-bottom: -8px;
   }
 
-  .btnforgotPassword {
+  .btn-forgot-password {
     margin-top: 21%;
     margin-left: 23%;
     font-size: 13px;
-;
-  width: max-content;}
+    width: max-content;
+  }
 
-  .buttonsLogin {
+  .buttons-login {
     padding-left: 10px;
   }
   /* Login RS End */
 
   /* Sing Up RS Start */
 
-  .singUp {
+  .sing-up {
     padding: 1% 7%;
     margin-left: 39%;
   }
 
-  div.singUp {
+  div.sing-up {
     width: 100%;
     margin: auto;
   }
 
-  div.singUp {
+  div.sing-up {
     float: right;
     margin-right: 10px;
     margin-bottom: -28%;
   }
 
-  .btnCreateAccount {
+  .btn-create-account {
     margin-left: 38%;
     font-size: 12px;
 
@@ -407,19 +407,19 @@ btnchangePassword div.reset {
     margin-top: 31%;
   }
 
-  .textCreateAccount {
+  .text-create-account {
     transform: translate(10rem, -60px);
     font-size: 22px;
   }
 
-  .inputSingUp {
+  .input-sing-up {
     padding: 15px 40px;
     margin-top: 9%;
     margin-left: -14px;
     font-size: 14px;
   }
 
-  .btnRegister {
+  .btn-register {
     align-items: center;
     padding: 15px 39px;
     font-size: 14px;
@@ -433,55 +433,55 @@ btnchangePassword div.reset {
   /* Sing Up RS End*/
 
   /* Change Password RS Start */
-  .forgotPassword {
+  .forgot-password {
     padding: 0% 7%;
     margin-left: 39%;
   }
 
-  div.forgotPassword {
+  div.forgot-password {
     width: 100%;
     margin: auto;
   }
 
-  div.forgotPassword {
+  div.forgot-password {
     float: right;
     margin-right: 20%;
     margin-bottom: 0%;
   }
 
-  .textNewPassword {
+  .text-new-password {
     font-size: 23px;
 
     transform: translate(2rem, -68px);
   }
 
-  .inputNewPassword {
+  .input-new-password {
     margin-left: -16%;
     padding: 17px 55px;
   }
 
-  .inputUsernameSingUp {
+  .input-username-sing-up {
     margin-top: 34px;
     margin-bottom: 0px;
   }
 
-  .btnSearchUser {
+  .btn-search-user {
     padding: 15px 45px;
 
     margin-left: 40%;
   }
 
-  .newPassword {
+  .new-password {
     margin-top: 27px;
     margin-bottom: 26px;
   }
 
-  .confirmNewpassword {
+  .confirm-new-password {
     margin-top: 0px;
     margin-bottom: 30px;
   }
 
-  .btnChangePassword {
+  .btn-change-password {
     padding: 15px 45px;
 
     margin-left: 40%;

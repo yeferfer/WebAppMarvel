@@ -1,7 +1,7 @@
 'use strict';
 
 //Page home
-const pageHome = document.querySelector('.pageHome');
+const pageHome = document.querySelector('.page-home');
 
 //Modal
 const modal = document.querySelector('.modal');
@@ -10,34 +10,34 @@ const btnCloseModal = document.querySelector('.close-modal');
 const btnOpenModal = document.querySelector('.show-modal');
 
 //Login
-const infoLoginContainer = document.querySelector('.infoLoginContainer');
-const textLogin = document.querySelector('.textLogin');
-const inputUsername = document.querySelector('.inputUsername');
-const inputPassword = document.querySelector('.inputPassword');
-const btnLogin = document.querySelector('.btnLogin');
-const btnforgotPassword = document.querySelector('.btnforgotPassword');
-const btnCreateAccount = document.querySelector('.btnCreateAccount');
+const infoLoginContainer = document.querySelector('.info-login-container');
+const textLogin = document.querySelector('.text-login');
+const inputUsername = document.querySelector('.input-username');
+const inputPassword = document.querySelector('.input-password');
+const btnLogin = document.querySelector('.btn-login');
+const btnforgotPassword = document.querySelector('.btn-forgot-password');
+const btnCreateAccount = document.querySelector('.btn-create-account');
 
 //Forgot Password
-const forgotPassword = document.querySelector('.forgotPassword');
-const textNewPassword = document.querySelector('.textNewPassword');
+const forgotPassword = document.querySelector('.forgot-password');
+const textNewPassword = document.querySelector('.text-new-password');
 const inputUsernameNewPassword = document.querySelector(
-  '.inputUsernameNewPassword'
+  '.input-username-new-password'
 );
-const btnSearchUser = document.querySelector('.btnSearchUser');
-const newPassword = document.querySelector('.newPassword');
-const confirmNewpassword = document.querySelector('.confirmNewpassword');
-const btnChangePassword = document.querySelector('.btnChangePassword');
+const btnSearchUser = document.querySelector('.btn-search-user');
+const newPassword = document.querySelector('.new-password');
+const confirmNewpassword = document.querySelector('.confirm-new-password');
+const btnChangePassword = document.querySelector('.btn-change-password');
 
 //Create Account
-const createAccount = document.querySelector('.singUp');
-const textCreateAccount = document.querySelector('.textCreateAccount');
-const inputUsernameSingUp = document.querySelector('.inputUsernameSingUp');
+const singUp = document.querySelector('.sing-up');
+const textCreateAccount = document.querySelector('.text-create-account');
+const inputUsernameSingUp = document.querySelector('.input-username-sing-up');
 const confirmInputUsernameSingUp = document.querySelector(
-  '.confirmInputUsernameSingUp'
+  '.confirm-input-username-sing-up'
 );
-const inputPasswordSingUp = document.querySelector('.inputPasswordSingUp ');
-const btnRegister = document.querySelector('.btnRegister');
+const inputPasswordSingUp = document.querySelector('.input-password-sing-up ');
+const btnRegister = document.querySelector('.btn-register');
 
 //user
 const user = [
@@ -79,10 +79,10 @@ const openModal = function () {
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
-  createAccount.classList.add('hidden');
+  singUp.classList.add('hidden');
   forgotPassword.classList.add('hidden');
   infoLoginContainer.classList.remove('hidden');
-  modal.classList.remove('modalChangePassword');
+  modal.classList.remove('modal-change-password');
   btnCloseModal.classList.remove('close-modal-Change-Password');
   newPassword.classList.add('hidden');
   confirmNewpassword.classList.add('hidden');
@@ -123,12 +123,12 @@ btnLogin.addEventListener('click', () => {
         element.passwordUser === inputPassword.value
     )[0]?.nameUser;
     document.querySelector(
-      '.textSearchName'
+      '.text-search-name'
     ).textContent = `WELCOME ${currentUser.toUpperCase()}!`;
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
     pageHome.classList.add('hidden');
-    document.querySelector('.pageSearch').classList.remove('hidden');
+    document.querySelector('.page-search').classList.remove('hidden');
   } else {
     if (user.some(element => element.nameUser !== inputUsername.value))
       textLogin.textContent = 'User not found 😐';
@@ -143,7 +143,7 @@ btnLogin.addEventListener('click', () => {
 //Case Create User
 btnCreateAccount.addEventListener('click', () => {
   infoLoginContainer.classList.add('hidden');
-  createAccount.classList.remove('hidden');
+  singUp.classList.remove('hidden');
 });
 
 btnRegister.addEventListener('click', () => {
@@ -179,7 +179,7 @@ btnRegister.addEventListener('click', () => {
     inputUsernameSingUp.value = '';
     confirmInputUsernameSingUp.value = '';
     inputPasswordSingUp.value = '';
-    createAccount.classList.add('hidden');
+    singUp.classList.add('hidden');
     infoLoginContainer.classList.remove('hidden');
     inputUsername.value = '';
     inputPassword.value = '';
@@ -190,8 +190,8 @@ btnRegister.addEventListener('click', () => {
 btnforgotPassword.addEventListener('click', () => {
   infoLoginContainer.classList.add('hidden');
   forgotPassword.classList.remove('hidden');
-  modal.classList.add('modalChangePassword');
-  btnCloseModal.classList.add('close-modal-Change-Password');
+  modal.classList.add('modal-change-password');
+  btnCloseModal.classList.add('close-modal-change-password');
 });
 
 btnSearchUser.addEventListener('click', () => {
@@ -218,8 +218,8 @@ btnChangePassword.addEventListener('click', () => {
       element => element.nameUser === inputUsernameNewPassword.value
     );
     userToChangePassword[0].passwordUser = newPassword.value;
-    modal.classList.remove('modalChangePassword');
-    btnCloseModal.classList.remove('close-modal-Change-Password');
+    modal.classList.remove('modal-change-password');
+    btnCloseModal.classList.remove('close-modal-change-password');
     newPassword.classList.add('hidden');
     confirmNewpassword.classList.add('hidden');
     btnChangePassword.classList.add('hidden');

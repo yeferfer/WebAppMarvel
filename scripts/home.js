@@ -1,9 +1,9 @@
 'use strict';
 
 //Button Page Search
-document.querySelector('.btnPageLogin').addEventListener('click', () => {
-  document.querySelector('.pageLogin').classList.remove('hidden');
-  document.querySelector('.pageHome').classList.add('hidden');
+document.querySelector('.btn-page-login').addEventListener('click', () => {
+  document.querySelector('.page-login').classList.remove('hidden');
+  document.querySelector('.page-home').classList.add('hidden');
 });
 
 let keys = {};
@@ -76,7 +76,7 @@ const getDataHome = async function (
 
 //Slider Hero Start
 const slider = document.querySelector('#slider');
-let sliderSection = document.querySelectorAll('.slider__section');
+let sliderSection = document.querySelectorAll('.slider-section');
 let sliderSectionLast = sliderSection[sliderSection.length - 1];
 
 const btnLeft = document.querySelector('#btn-left');
@@ -85,7 +85,7 @@ const btnRight = document.querySelector('#btn-right');
 slider.insertAdjacentElement('afterbegin', sliderSectionLast);
 
 function Next() {
-  let sliderSectionFirst = document.querySelectorAll('.slider__section')[0];
+  let sliderSectionFirst = document.querySelectorAll('.slider-section')[0];
   slider.style.marginLeft = '-200%';
   slider.style.transition = 'all 0.5s';
   setTimeout(function () {
@@ -96,7 +96,7 @@ function Next() {
 }
 
 function Prev() {
-  let sliderSection = document.querySelectorAll('.slider__section');
+  let sliderSection = document.querySelectorAll('.slider-section');
   let sliderSectionLast = sliderSection[sliderSection.length - 1];
   slider.style.marginLeft = '0%';
   slider.style.transition = 'all 0.5s';
@@ -194,8 +194,8 @@ const GetCardsData = () => {
     }
 
     //Assign Values ​​to Cards
-    const imgHome = document.querySelectorAll('.imgHome');
-    const titleCardImg = document.querySelectorAll('.titleCardImg');
+    const imgHome = document.querySelectorAll('.img-home');
+    const titleCardImg = document.querySelectorAll('.card-img-title');
     const imgCardApi = new Array();
     const titleCardApi = new Array();
 
