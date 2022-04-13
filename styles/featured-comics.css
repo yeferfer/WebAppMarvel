@@ -1,0 +1,120 @@
+/* Carrousel Cards featured Comics Start */ 
+.section-cards-featured{
+  margin: 0 auto;
+  /* padding: 0 56px; Pendiente para cuando se cree el menú lateral, por ahora no se ve bien*/  
+  /* overflow: hidden; */
+}
+
+.slider-card-featured{
+  /* display: flex;
+  flex-direction: row; */
+  position: relative;
+}
+
+@media (min-width: 1300px) {
+  .section-cards-featured{
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+.list-title{
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  margin: 24px 0 24px 52px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.slider-card-featured div img {
+height: auto;
+max-width: 100%;
+}
+.card-featured{
+  display: flex !important;
+  position: relative;
+}
+.card-featured::before {
+  z-index: 0;
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1)0%, rgba(90, 90, 90, 0.4)70%,rgba(0, 0, 0, 0.7)95%);
+  z-index: 2;
+  max-height: 675px;
+}
+.card-featured .info-comic{
+  position: absolute;
+  padding-bottom: 40px;
+  padding-left: 24px;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  z-index: 3;
+  font-size: 20px;
+  width: calc(100% - 48px);
+  margin: auto;
+  overflow: hidden;
+}
+.card-featured .info-comic p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #0FEFFD;
+  font-size: 400;
+  margin: 0 0 8px 0;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 0 8px ;
+  background-color: rgba(29, 29, 29, 0.5);
+  
+}
+.card-featured .info-comic h3{
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0;
+}
+.stars-container .fa-solid {
+  font-size: 12px;
+}
+.stars-container{
+  margin-bottom: 12px;
+}
+.slick-next {
+  background-color: red;
+}
+.slider-card-featured .prev_arrow{
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 1.5%;  
+  z-index: 1;  
+}
+.slider-card-featured .next_arrow{
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 1.5%;  
+  z-index: 1;  
+}
+/* .slider-card-featured .card-featured{
+transform: translateX(20px);
+background-color: rgba(0, 0, 0, 0.4);
+} */
+
+
+
+/* Carrousel Cards featured Comics Start   */

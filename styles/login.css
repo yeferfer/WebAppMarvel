@@ -1,0 +1,496 @@
+/*Modal Start*/
+.hidden {
+  display: none;
+}
+
+.show-modal {
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.2rem;
+  right: 1rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: #eeeeee;
+  padding: 6rem;
+  border-radius: 20px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  height: max-content;
+}
+
+.modalChangePassword {
+  width: 25%;
+}
+
+.close-modal-Change-Password {
+  font-size: 4rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+/* Modal End */
+
+/* Login Start */
+.imgContainer {
+  transform: translate(-41px, 4px);
+}
+
+.imgLogin {
+  transform: scale(1.76);
+  width: 20%;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+}
+
+.credentialsLogin {
+  padding: 1% 7%;
+  margin-left: 39%;
+}
+
+.textLogin {
+  font-size: xx-large;
+  margin-left: 15%;
+  color: #000000;
+  transform: translate(0px, -50px);
+  margin-bottom: -40px;
+}
+
+.inputLogin {
+  padding: 12px 82px;
+  border: 2px solid #100;
+  color: #100;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.inputUsername {
+  margin-top: 57px;
+  margin-bottom: 20px;
+}
+
+.btnLogin {
+  background-color: #ef5c43;
+  border: 2px solid #100;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: #000000;
+  padding: 10px 95px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left: 15%;
+
+  margin-bottom: 8px;
+  margin-top: 33px;
+  cursor: pointer;
+}
+
+.btnforgotPassword {
+  border: none;
+  display: block;
+  color: #000000;
+  background-color: transparent;
+  margin-left: 23%;
+  font-size: 16px;
+
+  margin-bottom: -30px;
+  cursor: pointer;
+  margin-top: 6.3%;
+}
+
+.btnCreateAccount {
+  border: none;
+  display: block;
+  color: #000000;
+  background-color: transparent;
+  margin-left: 34%;
+
+  margin-bottom: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: -22%;
+  margin-top: 14%;
+}
+
+div.infoLoginContainer {
+  width: 100%;
+  margin: auto;
+}
+
+div.infoLoginContainer img.imgLogin {
+  float: left;
+  margin-right: 15px;
+}
+
+div.reset {
+  clear: both;
+}
+
+.dateLogin {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.buttonsLogin {
+  margin-bottom: -17px;
+}
+/* Login end */
+
+/* Sign Up Start */
+.singUp {
+  padding: 0% 7%;
+  margin-left: 39%;
+}
+
+div.singUp {
+  width: 100%;
+  margin: auto;
+}
+
+div.singUp {
+  float: right;
+  margin-right: -10%;
+  margin-bottom: -3%;
+}
+
+.textCreateAccount {
+  font-size: xx-large;
+  margin-left: 0%;
+  color: #000000;
+  transform: translate(19rem, -60px);
+  margin-bottom: -40px;
+  width: max-content;
+}
+
+.inputSingUp {
+  padding: 19px 102px;
+  border: 2px solid #100;
+  color: #100;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.inputUsername {
+  margin-top: 47px;
+  margin-bottom: 26px;
+}
+
+.inputUsernameSingUp {
+  margin-top: 46px;
+  margin-bottom: 30px;
+}
+
+.btnRegister {
+  background-color: #518cca;
+  border: 2px solid #100;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: #000000;
+  padding: 21px 56px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left: 15%;
+  margin-bottom: 8px;
+  margin-top: 34px;
+  transform: translate(-1px, -6rem);
+  cursor: pointer;
+}
+
+div.reset {
+  clear: both;
+}
+/* Sign Up End */
+
+/* Change Password Start */
+.forgotPassword {
+  padding: 0% 7%;
+  margin-left: 39%;
+}
+
+div.forgotPassword {
+  width: 100%;
+  margin: auto;
+}
+
+div.forgotPassword {
+  float: right;
+  margin-right: 20%;
+  margin-bottom: 0%;
+}
+
+.textNewPassword {
+  font-size: xx-large;
+  margin-left: 0%;
+  color: #000000;
+  transform: translate(10rem, -60px);
+  margin-bottom: -40px;
+  width: max-content;
+}
+
+.inputNewPassword {
+  margin-top: 10%;
+  margin-left: 19%;
+  padding: 19px 102px;
+  border: 2px solid #100;
+  color: #100;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.inputUsernameSingUp {
+  margin-top: 36px;
+  margin-bottom: 35px;
+}
+
+.btnSearchUser {
+  background-color: #518cca;
+  border: 2px solid #100;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: #000000;
+  padding: 21px 55px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left: 56%;
+  margin-bottom: 0px;
+  margin-top: 22px;
+
+  cursor: pointer;
+}
+
+.newPassword {
+  margin-top: 27px;
+  margin-bottom: 26px;
+}
+
+.confirmNewpassword {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.btnChangePassword {
+  background-color: #ef5c43;
+  border: 2px solid #100;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: #000000;
+  padding: 21px 56px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left: 54%;
+  margin-bottom: -10%;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+btnchangePassword div.reset {
+  clear: both;
+}
+/* Change Password End */
+
+/* Responsive Start */
+@media (max-width: 721px) {
+  /* RS => Responsive */
+
+  /* Modal RS Start*/
+
+  .close-modal {
+    position: absolute;
+    top: -0.4rem;
+    right: 0.5rem;
+    font-size: 4rem;
+  }
+  /* Moda RS End */
+
+  /* Login RS Strat*/
+  .imgLogin {
+    transform: scale(3.2);
+  }
+
+  .imgContainer {
+    transform: translate(-45px, 44px);
+  }
+
+  .textLogin {
+    width: max-content;
+    font-size: 22px;
+  }
+
+  .inputLogin {
+    padding: 15px 40px;
+    margin-top: 9%;
+    margin-left: -14px;
+  }
+
+  .inputUsername {
+    margin-top: 17px;
+    margin-bottom: 0px;
+  }
+
+  .inputUsernameSingUp {
+    margin-top: 46px;
+    margin-bottom: 0px;
+  }
+
+  .btnLogin {
+    padding: 10px 100px;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-left: -11%;
+    margin-top: 21px;
+    margin-bottom: -8px;
+  }
+
+  .btnforgotPassword {
+    margin-top: 4%;
+    margin-left: 23%;
+    font-size: 13px;
+    padding-top: 29px;
+    width: max-content;
+  }
+
+  .buttonsLogin {
+    padding-left: 10px;
+  }
+  /* Login RS End */
+
+  /* Sing Up RS Start */
+
+  .singUp {
+    padding: 1% 7%;
+    margin-left: 39%;
+  }
+
+  div.singUp {
+    width: 100%;
+    margin: auto;
+  }
+
+  div.singUp {
+    float: right;
+    margin-right: 10px;
+    margin-bottom: -28%;
+  }
+
+  .btnCreateAccount {
+    margin-left: 38%;
+    font-size: 12px;
+
+    margin-bottom: -55px;
+    width: max-content;
+    margin-top: 31%;
+  }
+
+  .textCreateAccount {
+    transform: translate(10rem, -60px);
+    font-size: 22px;
+  }
+
+  .inputSingUp {
+    padding: 15px 40px;
+    margin-top: 9%;
+    margin-left: -14px;
+    font-size: 14px;
+  }
+
+  .btnRegister {
+    align-items: center;
+    padding: 15px 39px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: 86%;
+    margin-bottom: -30px;
+    padding-left: 43px;
+    transform: translate(-4px, -10.38rem);
+  }
+
+  /* Sing Up RS End*/
+
+  /* Change Password RS Start */
+  .forgotPassword {
+    padding: 0% 7%;
+    margin-left: 39%;
+  }
+
+  div.forgotPassword {
+    width: 100%;
+    margin: auto;
+  }
+
+  div.forgotPassword {
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 0%;
+  }
+
+  .textNewPassword {
+    font-size: 23px;
+
+    transform: translate(2rem, -68px);
+  }
+
+  .inputNewPassword {
+    margin-left: -16%;
+    padding: 17px 55px;
+  }
+
+  .inputUsernameSingUp {
+    margin-top: 34px;
+    margin-bottom: 0px;
+  }
+
+  .btnSearchUser {
+    padding: 15px 45px;
+
+    margin-left: 40%;
+  }
+
+  .newPassword {
+    margin-top: 27px;
+    margin-bottom: 26px;
+  }
+
+  .confirmNewpassword {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  .btnChangePassword {
+    padding: 15px 45px;
+
+    margin-left: 40%;
+  }
+
+  btnchangePassword div.reset {
+    clear: both;
+  }
+  /* Change Password RS End */
+}
+/* Responsive End */
