@@ -9,12 +9,12 @@ body {
 /* Buttons Page Search Start */
 .container-buttons {
   background: #0000004f;
-  
   padding: 5px 0px;
   display: flex;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-border: 2px solid #eee;}
+  border: 2px solid #eee;
+}
 
 .btns-search {
   margin-top: 10px;
@@ -23,6 +23,13 @@ border: 2px solid #eee;}
   color: white;
   border: none;
   font-size: 30px;
+}
+
+.btns-search:hover {
+  color: #43efe3;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
 }
 
 .btn-home {
@@ -114,10 +121,10 @@ border: 2px solid #eee;}
 }
 
 .modal-search {
-  position: fixed;
+  position: static;
   top: 30%;
   left: 89%;
-  transform: translate(-50%, -50%);
+  transform: translate(73rem, 5%);
   width: 10%;
   background-color: #ffffff;
   padding: 5rem;
@@ -370,6 +377,7 @@ border: 2px solid #eee;}
   }
 
   .modal-search {
+    transform: translate(205%, 5%);
     top: 30%;
     left: 80%;
   }
