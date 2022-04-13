@@ -20,7 +20,7 @@ const btnClearHistory = document.querySelector('.btn-clear-history');
 //Modal
 const modalSearch = document.querySelector('.modal-search');
 const overlaySearch = document.querySelector('.overlay-search');
-const btnshowModalSearch = document.querySelector('.show-modal-Search');
+const btnshowModalSearch = document.querySelector('.show-modal-search');
 
 //Search
 const searchCharacters = document.querySelector('.search-characters');
@@ -98,13 +98,18 @@ const closeModalSearch = function () {
 };
 
 //Open Modal Search
-btnshowModalSearch.addEventListener('click', openModalSearch);
+btnshowModalSearch.addEventListener('click', () => {
+  openModalSearch();
+});
 
 //Close Modal Search
-overlaySearch.addEventListener('click', closeModalSearch);
+overlaySearch.addEventListener('click', () => {
+  closeModalSearch();
+});
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalSearch.classList.contains('hidden')) {
     closeModalSearch();
+    hide(searchCharacters);
   }
 });
 

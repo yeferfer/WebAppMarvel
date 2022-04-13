@@ -9,12 +9,12 @@ body {
 /* Buttons Page Search Start */
 .container-buttons {
   background: #0000004f;
-  
   padding: 5px 0px;
   display: flex;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-border: 2px solid #eee;}
+  border: 2px solid #eee;
+}
 
 .btns-search {
   margin-top: 10px;
@@ -23,6 +23,14 @@ border: 2px solid #eee;}
   color: white;
   border: none;
   font-size: 30px;
+  z-index: 10;
+}
+
+.btns-search:hover {
+  color: #43efe3;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
 }
 
 .btn-home {
@@ -52,10 +60,12 @@ border: 2px solid #eee;}
 }
 
 .btn-clear-history {
+  cursor: pointer;
   margin-top: -25px;
 }
 
 .btn-close-session {
+  cursor: pointer;
   margin-top: 30px;
   transform: translate(-19px, 0px);
 }
@@ -109,15 +119,26 @@ border: 2px solid #eee;}
 /* Buttons Page Search End */
 
 /* Modal Start */
-.show-modal-Search {
+.show-modal-search {
   cursor: pointer;
+}
+
+.close-modal-search {
+  position: absolute;
+  top: 9px;
+  right: 25px;
+  font-size: 4rem;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 .modal-search {
   position: fixed;
   top: 30%;
   left: 89%;
-  transform: translate(-50%, -50%);
+  transform: translate(-10rem, -45%);
   width: 10%;
   background-color: #ffffff;
   padding: 5rem;
@@ -128,11 +149,13 @@ border: 2px solid #eee;}
 }
 
 .overlay-search {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
   z-index: 5;
 }
 /* Modal End */
@@ -370,6 +393,7 @@ border: 2px solid #eee;}
   }
 
   .modal-search {
+    transform: translate(-45%, -46%);
     top: 30%;
     left: 80%;
   }
