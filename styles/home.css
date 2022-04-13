@@ -3,6 +3,18 @@
   display: none;
 }
 
+/* button Page Search start */
+.btnPageLogin {
+  cursor: pointer;
+  background-color: transparent; /* Green */
+  border: none;
+
+  display: block;
+  margin-left: 93%;
+  font-size: 30px;
+}
+/* button Page Search End */
+
 /* Slider */
 /* .carrousel {
   width: 100%;
