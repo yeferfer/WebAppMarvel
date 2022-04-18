@@ -15,7 +15,7 @@
   .section-cards-featured {
     max-width: 1600px;
     margin: 0 auto;
-  }
+  /* justify-content: space-between; *//* align-items: center; */}
 }
 .list-title {
   font-family: 'Roboto', sans-serif;
